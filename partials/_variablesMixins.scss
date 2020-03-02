@@ -1,0 +1,31 @@
+// variables
+
+// font colours + pseudo states
+$primary-black: #2e2e2e;
+$secondary-black: #333333;
+$primary-white: #f6f6f6;
+$primary-accent: #64a604;
+$secondary-accent: #DC1570;
+
+// background colours
+$primary-bg: #f6f6f6;
+$secondary-bg: #999999;
+$accent-bg: #dded9a
+
+// anchor tags on hover & focus
+$anchor-hover-focus: 'a:focus, a:hover';
+
+// mixins
+
+// font sizes turn into rem values
+@mixin fontSize($sizeValue){
+    font-size: $sizeValue * 1px;
+    font-size: ($sizeValue/10) * 1rem;
+}
+
+// vertical + horizontal centering w/ flexbox
+@mixin flexCenter() {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
