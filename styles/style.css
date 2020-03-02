@@ -248,4 +248,77 @@ html {
 .skip-link:focus {
   left: 0;
 }
+
+::-moz-selection {
+  color: turquoise;
+}
+
+::selection {
+  color: turquoise;
+}
+
+ul, ol, li {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.wrapper {
+  max-width: 1280px;
+  width: 90%;
+  margin: 0 auto;
+}
+
+header {
+  background: url(../assets/home-1.jpeg);
+  height: 70vh;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+header h1 {
+  font-size: 46px;
+  font-size: 4.6rem;
+  letter-spacing: 1.1px;
+}
+
+header a, header i {
+  font-size: 20px;
+  font-size: 2rem;
+  color: #2e2e2e;
+  text-transform: uppercase;
+}
+
+header a, header .fa-search {
+  padding: 6px 10px;
+  display: inline-block;
+}
+
+header .top-bar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+header .top-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
 /*# sourceMappingURL=style.css.map */
