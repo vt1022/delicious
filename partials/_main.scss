@@ -19,8 +19,8 @@ main {
     }
 
     .reci-container__item {
-      flex: 1 2 40%;
-      height: 500px;
+      flex: 1 1 500px;
+      height: 400px;
     }
 
     .reci-container__item__image {
@@ -36,6 +36,7 @@ main {
 
     .reci-container__item:nth-of-type(2n) {
       display: flex;
+      padding: 10px 30px;
     }
 
     .reci-container__item.item2 {
@@ -59,7 +60,6 @@ main {
   }
 
   .restaurants {
-    height: 80vh;
     min-height: 600px;
     display: flex;
 
@@ -71,20 +71,40 @@ main {
     .rest__container__two-images {
       position: relative;
       max-width: 800px;
+      margin-top: 100px;
     }
     
     .rest__container__image-container:nth-of-type(2) {
       position: absolute;
-      max-width: 200px;
+      max-width: 180px;
       top: 0;
       right: 0;
-      transform: translate(50%,-50%);
+      transform: translate(40%,-55%);
     }
 
     .rest__container__image {
       height: 100%;
       width: 100%;
     }
+  }
+
+  .gallery {
+    @include flexCenter();
+    // height: 100vh;
+    // min-height: 800px;
+    flex-wrap: wrap;
+    align-content: center;
+    
+    .gall__image-container {
+      flex: 1 1 300px;
+    }
+
+    .gall__image {
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+
   }
 
 
