@@ -43,6 +43,10 @@ main {
       flex-direction: column;
     }
 
+    .reci-container__item.item4 {
+      background: $secondary-bg;
+    }
+
     .reci-container__item__menu {
       @include flexCenter();
       flex-wrap: wrap;
@@ -54,7 +58,34 @@ main {
 
   }
 
+  .restaurants {
+    height: 80vh;
+    min-height: 600px;
+    display: flex;
 
+    .rest__container {
+      @include flexCenter();
+      flex-direction: column;
+    }
+
+    .rest__container__two-images {
+      position: relative;
+      max-width: 800px;
+    }
+    
+    .rest__container__image-container:nth-of-type(2) {
+      position: absolute;
+      max-width: 200px;
+      top: 0;
+      right: 0;
+      transform: translate(50%,-50%);
+    }
+
+    .rest__container__image {
+      height: 100%;
+      width: 100%;
+    }
+  }
 
 
 }

@@ -306,15 +306,17 @@ header {
 }
 
 header h1 {
+  font-family: 'Raleway', sans-serif;
   font-size: 46px;
   font-size: 4.6rem;
+  font-weight: 700;
+  color: #2e2e2e;
   letter-spacing: 1.1px;
 }
 
 header a, header i {
   font-size: 20px;
   font-size: 2rem;
-  color: #2e2e2e;
   text-transform: uppercase;
 }
 
@@ -411,6 +413,10 @@ main .reci-container .reci-container__item.item2 {
           flex-direction: column;
 }
 
+main .reci-container .reci-container__item.item4 {
+  background: #ccc;
+}
+
 main .reci-container .reci-container__item__menu {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -429,5 +435,48 @@ main .reci-container .reci-container__item__menu .menu-item {
   -webkit-box-flex: 1;
       -ms-flex: 1 1 50%;
           flex: 1 1 50%;
+}
+
+main .restaurants {
+  height: 80vh;
+  min-height: 600px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+main .restaurants .rest__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+main .restaurants .rest__container__two-images {
+  position: relative;
+  max-width: 800px;
+}
+
+main .restaurants .rest__container__image-container:nth-of-type(2) {
+  position: absolute;
+  max-width: 200px;
+  top: 0;
+  right: 0;
+  -webkit-transform: translate(50%, -50%);
+          transform: translate(50%, -50%);
+}
+
+main .restaurants .rest__container__image {
+  height: 100%;
+  width: 100%;
 }
 /*# sourceMappingURL=style.css.map */
