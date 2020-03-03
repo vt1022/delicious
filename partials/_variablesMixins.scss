@@ -29,3 +29,29 @@ $anchor-hover-focus: 'a:focus, a:hover';
     justify-content: center;
     align-items: center;
 }
+
+// fonts
+// fix italics
+@mixin fontSans($size, $weight, $color, $italic) {
+    font-family: 'Raleway', sans-serif;
+
+    @include fontSize($size);
+    font-weight: $weight;
+    color: $color;
+
+    @if $italic {
+        font-weight: $weight+i;
+    }
+}
+
+@mixin fontSerif($size, $weight, $color, $italic) {
+    font-family: 'Lora', serif;
+    
+    @include fontSize($size);
+    font-weight: $weight;
+    color: $color;
+
+    @if $italic {
+        font-weight: $weight+i;
+    }
+}

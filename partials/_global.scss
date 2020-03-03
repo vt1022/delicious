@@ -7,11 +7,29 @@ ul, ol, li {
 }
 
 a {
+  @include fontSans(18, 700, $primary-black);
+  letter-spacing: 0.5px;
+
+    font-family: 'Raleway', sans-serif;
+  
+  text-transform: uppercase;
   text-decoration: none;
+
 }
 
-.wrapper {
+.wrapper,
+.h-wrapper {
   max-width: 1280px;
   width: 90%;
   margin: 0 auto;
+}
+
+.h-wrapper {
+  width: 95%;
+}
+
+p {
+  @include fontSerif(14, 400, $primary-black);
+  line-height: 24px;
+  letter-spacing: 0.3px;
 }

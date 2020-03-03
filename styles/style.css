@@ -267,17 +267,23 @@ a {
   text-decoration: none;
 }
 
-.wrapper {
+.wrapper,
+.h-wrapper {
   max-width: 1280px;
   width: 90%;
   margin: 0 auto;
 }
 
+.h-wrapper {
+  width: 95%;
+}
+
 header {
   background: url(../assets/home-1.jpeg);
   height: 70vh;
+  min-height: 400px;
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: center top;
   background-size: cover;
 }
 
