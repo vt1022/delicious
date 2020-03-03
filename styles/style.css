@@ -346,6 +346,12 @@ header .header__top-nav {
   display: flex;
 }
 
+main .outer-wrapper {
+  position: relative;
+  max-width: 2000px;
+  margin: 0 auto;
+}
+
 main .reci-container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -354,26 +360,74 @@ main .reci-container {
       flex-wrap: wrap;
 }
 
-main .main__reci-row-container {
-  position: relative;
+main .reci-container .item2 {
+  -webkit-box-ordinal-group: 0;
+      -ms-flex-order: -1;
+          order: -1;
+}
+
+main .reci-container .main__reci-row-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-main .reci-container__item {
-  max-width: 50%;
+main .reci-container .reci-container__item {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 2 40%;
+          flex: 1 2 40%;
+  height: 500px;
 }
 
-main .reci-container__item:nth-of-type(odd) {
-  max-height: 450px;
-}
-
-main .reci-container__item__image {
-  display: block;
+main .reci-container .reci-container__item__image {
   height: 100%;
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+  -o-object-position: bottom center;
+     object-position: bottom center;
+  margin: 0 auto;
+}
+
+main .reci-container .reci-container__item:nth-of-type(2n) {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+main .reci-container .reci-container__item.item2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+main .reci-container .reci-container__item__menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+main .reci-container .reci-container__item__menu .menu-item {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 50%;
+          flex: 1 1 50%;
 }
 /*# sourceMappingURL=style.css.map */

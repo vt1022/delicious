@@ -1,30 +1,59 @@
 main {
 
+  .outer-wrapper {
+    position: relative;
+    max-width: 2000px;
+    margin: 0 auto;
+  }
+
   .reci-container {
     display: flex;
     flex-wrap: wrap;
+
+    .item2 {
+      order: -1;
+    }
+
+    .main__reci-row-container {
+      display: flex;
+    }
+
+    .reci-container__item {
+      flex: 1 2 40%;
+      height: 500px;
+    }
+
+    .reci-container__item__image {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      object-position: bottom center;
+      margin: 0 auto;
+      // position: absolute;
+      // top: 0;
+      // right: 0;
+    }
+
+    .reci-container__item:nth-of-type(2n) {
+      display: flex;
+    }
+
+    .reci-container__item.item2 {
+      @include flexCenter();
+      flex-direction: column;
+    }
+
+    .reci-container__item__menu {
+      @include flexCenter();
+      flex-wrap: wrap;
+
+      .menu-item {
+        flex: 1 1 50%;
+      }
+    }
+
   }
 
-  .main__reci-row-container {
-    position: relative;
-    display: flex;
-  }
-
-  .reci-container__item {
-    max-width: 50%;
-  }
-
-  .reci-container__item:nth-of-type(odd) {
-    // select the full bleed image containers
-    max-height: 450px;
-  }
-
-  .reci-container__item__image {
-    display: block;
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-  }
 
 
 
