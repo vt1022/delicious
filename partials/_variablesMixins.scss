@@ -19,39 +19,31 @@ $anchor-hover-focus: 'a:focus, a:hover';
 
 // font sizes turn into rem values
 @mixin fontSize($sizeValue){
-    font-size: $sizeValue * 1px;
-    font-size: ($sizeValue/10) * 1rem;
+  font-size: $sizeValue * 1px;
+  font-size: ($sizeValue/10) * 1rem;
 }
 
 // vertical + horizontal centering w/ flexbox
 @mixin flexCenter() {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 // fonts
 // fix italics
-@mixin fontSans($size, $weight, $color, $italic) {
-    font-family: 'Raleway', sans-serif;
+@mixin fontSans($size, $weight, $color) {
+  font-family: 'Raleway', sans-serif;
 
-    @include fontSize($size);
-    font-weight: $weight;
-    color: $color;
-
-    @if $italic {
-        font-weight: $weight+i;
-    }
+  @include fontSize($size);
+  font-weight: $weight;
+  color: $color;
 }
 
-@mixin fontSerif($size, $weight, $color, $italic) {
-    font-family: 'Lora', serif;
-    
-    @include fontSize($size);
-    font-weight: $weight;
-    color: $color;
-
-    @if $italic {
-        font-weight: $weight+i;
-    }
+@mixin fontSerif($size, $weight, $color) {
+  font-family: 'Lora', serif;
+  
+  @include fontSize($size);
+  font-weight: $weight;
+  color: $color;
 }

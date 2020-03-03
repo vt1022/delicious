@@ -22,13 +22,13 @@ header {
     display: inline-block;
   }
 
-  .top-bar {
+  .header__top-bar {
     @include flexCenter();
     justify-content: space-between;
     flex-wrap: wrap;
   }
   
-  .top-nav {
+  .header__top-nav {
     display: flex;
   }
   

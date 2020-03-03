@@ -264,18 +264,36 @@ ul, ol, li {
 }
 
 a {
+  font-family: 'Raleway', sans-serif;
+  font-size: 18px;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #2e2e2e;
+  letter-spacing: 0.5px;
+  font-family: 'Raleway', sans-serif;
+  text-transform: uppercase;
   text-decoration: none;
 }
 
 .wrapper,
-.h-wrapper {
+.header__wrapper {
   max-width: 1280px;
   width: 90%;
   margin: 0 auto;
 }
 
-.h-wrapper {
+.header__wrapper {
   width: 95%;
+}
+
+p {
+  font-family: 'Lora', serif;
+  font-size: 14px;
+  font-size: 1.4rem;
+  font-weight: 400;
+  color: #2e2e2e;
+  line-height: 24px;
+  letter-spacing: 0.3px;
 }
 
 header {
@@ -305,7 +323,7 @@ header a, header .fa-search {
   display: inline-block;
 }
 
-header .top-bar {
+header .header__top-bar {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -322,9 +340,40 @@ header .top-bar {
       flex-wrap: wrap;
 }
 
-header .top-nav {
+header .header__top-nav {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+main .reci-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+main .main__reci-row-container {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+main .reci-container__item {
+  max-width: 50%;
+}
+
+main .reci-container__item:nth-of-type(odd) {
+  max-height: 450px;
+}
+
+main .reci-container__item__image {
+  display: block;
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 /*# sourceMappingURL=style.css.map */
