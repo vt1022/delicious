@@ -28,6 +28,12 @@ a {
   width: 95%;
 }
 
+.outer-wrapper {
+  position: relative;
+  max-width: 2000px;
+  margin: 0 auto;
+}
+
 p {
   @include fontSerif(14, 400, $primary-black);
   line-height: 24px;
