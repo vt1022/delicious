@@ -1,0 +1,61 @@
+.footer {
+  background: $primary-black;
+  padding-top: 30px;
+  
+  h2, h3, a {
+    color: $primary-accent;
+    margin-top: 0;
+  }
+
+  h3, i {
+    color: $primary-white;
+  }
+
+  p, input {
+    color: darken($secondary-white, 20%);
+  }
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+
+    &__contact, &__articles, &__socials {
+      flex: 1 1 30%;
+      max-width: 250px;
+    }
+
+    &__articles {
+      margin: 0 3%;
+    }
+
+    &__socials {
+
+      &__nav {
+        display: flex;
+        margin-top: 5px;
+
+        li {
+          margin: 5px;
+        }
+
+        li:first-of-type {
+          margin-left: 0;
+        }
+
+        a {
+          padding: 3px 8px;
+        }
+      }
+    }
+  }
+
+  &__copyright {
+    @include flexCenter();
+    background: darken($primary-black, 5%);
+    height: 40px;
+
+    p {
+      margin: 0;
+    }
+  }  
+}

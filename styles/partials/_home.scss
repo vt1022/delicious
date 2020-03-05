@@ -1,4 +1,4 @@
-main {
+.main {
 
   .reci-container {
     display: flex;
@@ -6,10 +6,6 @@ main {
 
     .item2 {
       order: -1;
-    }
-
-    .main__reci-row-container {
-      display: flex;
     }
 
     &__item {
@@ -109,10 +105,21 @@ main {
 
 
   .testimonials {
+    display: flex;
     padding: 40px 0;
     background: $accent-bg;
     height: 60vh;
     min-height: 500px;
+
+    .wrapper {
+      display: flex;
+    }
+
+    &__container {
+      @include flexCenter();
+      flex-direction: column;
+      margin: auto 0;
+    }
 
     &__container__arrow {
       background: none;

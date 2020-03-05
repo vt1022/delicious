@@ -1,4 +1,4 @@
-header {
+.header {
   background: url(../assets/home-1.jpeg);
   height: 70vh;
   min-height: 400px;
@@ -6,13 +6,8 @@ header {
   background-position: center top;
   background-size: cover;
 
-  h1 {
-    @include fontSans(46, 700, $primary-black);
-    letter-spacing: 1.1px;
-  }
-
   a, i {
-    @include fontSize(20);
+    @include fontSize(16);
     text-transform: uppercase;
   }
 

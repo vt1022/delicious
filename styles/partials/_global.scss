@@ -7,7 +7,7 @@ ul, ol, li {
 }
 
 a {
-  @include fontSans(18, 700, $primary-black);
+  @include fontSans(18);
   letter-spacing: 0.5px;
 
     font-family: 'Raleway', sans-serif;
@@ -34,8 +34,29 @@ a {
   margin: 0 auto;
 }
 
+h1 {
+  @include fontSans(46);
+  letter-spacing: 1.1px;
+  line-height: 24px;
+}
+
+h2 {
+  @include fontSans(24);
+  letter-spacing: 0.5px;
+  line-height: 36px;
+  text-transform: uppercase;
+}
+
+h3 {
+  @include fontSans(18);
+  letter-spacing: 0.5px;
+  line-height: 24px;
+  text-transform: uppercase;
+}
+
 p {
-  @include fontSerif(14, 400, $primary-black);
+  @include fontSerif(14);
   line-height: 24px;
   letter-spacing: 0.3px;
 }
+
