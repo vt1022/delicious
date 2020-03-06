@@ -1,50 +1,123 @@
 .main {
 
+  h2::after {
+    content: '';
+    width: 42%;
+    border: 2px solid $primary-accent;
+    border-radius: 3px;
+
+    position: absolute;
+    bottom: -40%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
   .reci-container {
-    display: flex;
-    flex-wrap: wrap;
 
-    .item2 {
-      order: -1;
+    &__card {
+      display: flex;
+      flex-wrap: wrap;
+      
+      .item2 {
+        order: -1;
+      }
     }
 
-    &__item {
-      flex: 1 1 500px;
-      height: 400px;
+    &__card__item {
+      flex: 1 1 450px;
     }
 
-    &__item__image {
+    &__card__item__image {
       height: 100%;
       width: 100%;
       object-fit: cover;
       object-position: bottom center;
       margin: 0 auto;
-      // position: absolute;
-      // top: 0;
-      // right: 0;
+
+      &.image2 {
+        object-position: bottom right;
+      }
     }
 
-    &__item:nth-of-type(2n) {
+    &__card__item:nth-of-type(2n) {
       display: flex;
-      padding: 10px 30px;
+      padding: 30px 40px;
     }
 
-    &__item.item2 {
+    &__card__item.item2 {
       @include flexCenter();
       flex-direction: column;
+      
+      p{
+        max-width: 500px;
+        text-align: center;
+      }
+      
     }
 
-    &__item.item4 {
+    &__card__item.item4 {
+      @include flexCenter();
       background: $secondary-bg;
+      padding-left: 65px;
     }
 
-    &__item__menu {
+    &__card__item__menu {
       @include flexCenter();
       flex-wrap: wrap;
+      max-width: 500px;
 
       .menu-item {
-        flex: 1 1 50%;
+        flex: 1 1 40%;
       }
+    
+      li:nth-of-type(2n) {
+        margin-left: 30px;
+      }
+
+      li p {
+        margin: 0;
+        margin-bottom: 10px;
+      }
+
+      li h3 {
+        position: relative;
+        margin: 0 0 5px 0;
+      }
+      
+      // ::before icons for list starts
+      li h3::before {
+        position: absolute;
+        left: -30px;
+        font-family: "Font Awesome 5 Pro";
+        font-weight: 900;
+      }
+
+      li:nth-of-type(1) h3::before {
+        content: '\f094';
+      }
+
+      li:nth-of-type(2) h3::before {
+        content: '\f2e7';
+      }
+
+      li:nth-of-type(3) h3::before {
+        content: '\f0f4';
+      }
+
+      li:nth-of-type(4) h3::before {
+        content: '\f000';
+      }
+
+      li:nth-of-type(5) h3::before {
+        content: '\f06c';
+      }
+
+      li:nth-of-type(6) h3::before {
+        content: '\f2e5';
+      }
+      // ::before icons for list ends
+
+
     }
 
   }
@@ -56,6 +129,13 @@
     &__container {
       @include flexCenter();
       flex-direction: column;
+      margin: 0 auto;
+      padding: 80px 0;
+
+      &__body {
+        max-width: 800px;
+        text-align: center;
+      }
     }
 
     &__container__two-images {
@@ -76,17 +156,11 @@
       height: 100%;
       width: 100%;
     }
-
-    &__container__body {
-
-    }
   }
 
 
   .gallery {
     @include flexCenter();
-    // height: 100vh;
-    // min-height: 800px;
     flex-wrap: wrap;
     align-content: center;
     
@@ -110,6 +184,7 @@
     background: $accent-bg;
     height: 60vh;
     min-height: 500px;
+    max-height: 900px;
 
     .wrapper {
       display: flex;
@@ -118,13 +193,52 @@
     &__container {
       @include flexCenter();
       flex-direction: column;
-      margin: auto 0;
+      margin: auto auto;
+    }
+
+    &__container__body {
+      @include fontSerif(24);
+      font-style: italic;
+      max-width: 800px;
+      
+      text-align: center;
+      letter-spacing: 0.6px;
+      line-height: 36px;
+
+      position: relative;
+
+      &::before, &::after {
+        @include fontSize(46);
+        font-family: "Font Awesome 5 Pro";
+        font-weight: 900;
+        font-style: normal;
+        color: lighten($accent-bg, 20%);
+        position: absolute;
+      }
+
+      &::before {
+        content: '\f10d';
+        right: 104%;
+      }
+
+      &::after {
+        content: '\f10e';
+        left: 104%;
+        bottom: 20px;
+      }
+    }
+
+    &__container__arrows-container {
+      margin-top: 30px;
     }
 
     &__container__arrow {
       background: none;
+      color: lighten($accent-bg, 20%);
+      font-size: 30px;
       border: 0;
       padding: 0;
+      margin: 20px;
     }
   }
 

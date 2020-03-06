@@ -45,6 +45,7 @@ h2 {
   letter-spacing: 0.5px;
   line-height: 36px;
   text-transform: uppercase;
+  position: relative;
 }
 
 h3 {
@@ -55,8 +56,19 @@ h3 {
 }
 
 p {
-  @include fontSerif(14);
+  @include fontSerif(14, 400, lighten($primary-black, 30%));
   line-height: 24px;
   letter-spacing: 0.3px;
 }
 
+.button {
+  @include fontSize(14);
+  color: $primary-white;
+  background: $primary-accent;
+  padding: 16px 30px;
+  margin-top: 15px;
+}
+
+button:hover {
+  cursor: pointer;
+}
