@@ -16,14 +16,19 @@ a {
 }
 
 .wrapper,
-.header__wrapper {
+.header-wrapper,
+.blog-wrapper {
   max-width: 1280px;
   width: 90%;
   margin: 0 auto;
 }
 
-.header__wrapper {
+.header-wrapper {
   width: 95%;
+}
+
+.blog-wrapper {
+  width: 75%;
 }
 
 .outer-wrapper {

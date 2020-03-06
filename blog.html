@@ -12,7 +12,7 @@
 
   <body class="blog-body">
     <header class="header">
-      <div class="header__top-bar header__wrapper">
+      <div class="header__top-bar header-wrapper">
         <h1>Delicious</h1>
         <nav>
           <ul class="header__top-bar__nav">
@@ -41,10 +41,16 @@
         <section class="post">
           <div class="post__container">
             <h1>Pineapple Chicken</h1>
-            <ul class="post__container__info">
-              <li>Posted at July 11, 2018</li>
-              <li>by <a href="#userAdmin">Admin</a></li>
-              <li>in <a href="#recipes">Recipes</a></li>
+            <ul class="post__container__info credits">
+              <li>
+                Posted at July 11, 2018
+              </li>
+              <li>
+                by <a href="#userAdmin">Admin</a>
+              </li>
+              <li>
+                in <a href="#recipes">Recipes</a>
+              </li>
             </ul>
             
             <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eius tempore sequi temporibus. Dignissimos sint debitis optio qui cumque exercitationem et, porro quidem laudantium quo autem, quaerat placeat! Cupiditate accusantium!</p>
@@ -55,32 +61,36 @@
           </div><!--post_container-->
 
           <div class="post__socials">
-            <h3>Tags:</h3>
-            <ul class="post__socials__tags">
-              <li><a href="#">Recipes</a></li>
-              <li><a href="#">Chicken</a></li>
-              <li><a href="#">Pineapple</a></li>
-              <li><a href="#">Mexican</a></li>
-            </ul>
-
-            <h3>Share:</h3>
-              <ul class="post__socials__share">
-                <li>
-                  <a href="#fb" aria-label="go to our facebook">
-                    <i class="fab fa-facebook-f" aria-hidden></i>
-                  </a>
-                </li>
-                <li>
-                  <a href="#twitter" aria-label="go to our twitter">
-                    <i class="fab fa-twitter" aria-hidden></i>
-                  </a>
-                </li>
-                <li>
-                  <a href="#ig" aria-label="go to our instgram">
-                    <i class="fab fa-instagram" aria-hidden></i>
-                  </a>
-                </li>
+            <div class="post__socials__container tags">
+              <h3>Tags:</h3>
+              <ul class="post__socials__tags">
+                <li><a href="#">Recipes</a>,</li>
+                <li><a href="#">Chicken</a>,</li>
+                <li><a href="#">Pineapple</a>,</li>
+                <li><a href="#">Mexican</a></li>
               </ul>
+            </div>
+
+            <div class="post__socials__container share">
+              <h3>Share:</h3>
+                <ul class="post__socials__share">
+                  <li>
+                    <a href="#fb" aria-label="go to our facebook">
+                      <i class="fab fa-facebook-f" aria-hidden></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#twitter" aria-label="go to our twitter">
+                      <i class="fab fa-twitter" aria-hidden></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#ig" aria-label="go to our instgram">
+                      <i class="fab fa-instagram" aria-hidden></i>
+                    </a>
+                  </li>
+                </ul>
+            </div>
           </div><!--post_socials-->
 
           <div class="post__author">
@@ -99,21 +109,72 @@
           <h3>Related Posts</h3>
           <div class="related__container">
             <div class="related__article article1">
-              <h2>How to Bake the Perfect Cake</h2>
-              <ul></ul>
+              <a href="#">
+                <div class="related__article__image-container">
+                  <img src="./assets/blog-3.jpeg" alt="a pink cake with floral decoration">
+                </div>
+                <h2>How to Bake the Perfect Cake</h2>
+              </a>
+              <ul class="related__article__info credits">
+                <li>Posted at July 11, 2018</li>
+                <li>by <a href="#userAdmin">Admin</a></li>
+                <li>in <a href="#recipes">Recipes</a></li>
+              </ul>
             </div>
             <div class="related__article article2">
-              <h2>Floral Cupcakes</h2>
-              <ul></ul>
+              <a href="#">
+                <div class="related__article__image-container">
+                  <img src="./assets/blog-4.jpeg" alt="3 cupcakes with floral decoration">
+                </img>
+                <h2>Floral Cupcakes</h2>
+              </a>
+              <ul class="related__article__info credits">
+                <li>Posted at July 19, 2018</li>
+                <li>by <a href="#userAdmin">Admin</a></li>
+                <li>in <a href="#recipes">Recipes</a></li>
+              </ul>
             </div>
             <div class="related__article article3">
-              <h2>Single Post With Image</h2>
-              <ul></ul>
+              <a href="#">
+                <div class="related__article__image-container">
+                  <img src="./assets/blog-5.jpeg" alt="two finger sprinkling greens on a salad">
+                </div>
+                <h2>Single Post With Image</h2>
+              </a>
+              <ul class="related__article__info credits">
+                <li>Posted at July 22, 2018</li>
+                <li>by <a href="#userAdmin">Admin</a></li>
+                <li>in <a href="#recipes">Recipes</a></li>
+              </ul>
             </div>
-          </div>
+          </div><!--related__container-->
         </section>
 
         <section class="comments">
+          <h3>02 Comments</h3>
+          <div class="comments__container">
+            <div class="comments__card card1">
+              <div class="comments__card__image-container">
+                <img src="./assets/blog-6.jpeg" alt="picture of Lucatony Avaro">
+              </div>
+              <div class="comments__card__body">
+                <p><span>Lucatony Avaro</span> - Web Developer</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad nesciunt dignissimos quae cupiditate quo distinctio sed laborum, nisi provident debitis laboriosam, enim sint! At, minus. Maiores hic sint dignissimos. Expedita!</p>
+                <p>July 17, 2015 at 15 hours ago</p>
+              </div>
+            </div>
+            <div class="comments__card card2">
+              <div class="comments__card__image-container">
+                <img src="./assets/blog-7.jpeg" alt="picture of Brian Hudson">
+              </div>
+              <div class="comments__card__body">
+                <p><span>Brian Hudson</span> - Web Developer</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus ducimus iure deleniti voluptas animi voluptates impedit mollitia itaque totam facilis in, molestiae rerum quaerat neque temporibus cumque natus omnis distinctio?</p>
+                <p>July 17, 2015 at 15 hours ago</p>
+              </div>
+            </div>
+          </div>
+
 
         </section>
       </div><!--wrapper-->

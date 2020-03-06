@@ -1,251 +1,252 @@
-.main {
-
-  h2::after {
-    content: '';
-    width: 42%;
-    border: 2px solid $primary-accent;
-    border-radius: 3px;
-
-    position: absolute;
-    bottom: -40%;
-    left: 50%;
-    transform: translateX(-50%);
-  }
-
-  .reci-container {
-
-    &__card {
-      display: flex;
-      flex-wrap: wrap;
-      
-      &.card2 {
-        min-height: 580px;
-      }
-
-      .item2 {
-        order: -1;
-      }
-    }
-
-    &__card__item {
-      flex: 1 1 450px;
-    }
-
-    &__card__item__image {
-      height: 100%;
-      width: 100%;
-      object-fit: cover;
-      object-position: bottom center;
-      margin: 0 auto;
-
-      &.image2 {
-        object-position: bottom right;
-      }
-    }
-
-    &__card__item:nth-of-type(2n) {
-      display: flex;
-      padding: 25px;
-    }
-
-    &__card__item.item2 {
-      @include flexCenter();
-      flex-direction: column;
-      
-      p{
-        max-width: 500px;
-        text-align: center;
-      }
-      
-    }
-
-    &__card__item.item4 {
-      @include flexCenter();
-      background: $secondary-bg;
-      padding-left: 65px;
-    }
-
-    &__card__item__menu {
-      @include flexCenter();
-      align-items: start;
-      flex-wrap: wrap;
-      max-width: 500px;
-
-      .menu-item {
-        flex: 1 1 40%;
-        min-width: 250px;
-      }
-    
-      li:nth-of-type(odd) p {
-        margin-right: 25px;
-      }
-
-      li p {
-        margin: 0;
-        margin-bottom: 10px;
-      }
-
-      li h3 {
-        position: relative;
-        margin: 0 0 5px 0;
-      }
-      
-      // ::before icons for list starts
-      li h3::before {
-        position: absolute;
-        left: -30px;
-        font-family: "Font Awesome 5 Pro";
-        font-weight: 900;
-      }
-
-      li:nth-of-type(1) h3::before {
-        content: '\f094';
-      }
-
-      li:nth-of-type(2) h3::before {
-        content: '\f2e7';
-      }
-
-      li:nth-of-type(3) h3::before {
-        content: '\f0f4';
-      }
-
-      li:nth-of-type(4) h3::before {
-        content: '\f000';
-      }
-
-      li:nth-of-type(5) h3::before {
-        content: '\f06c';
-      }
-
-      li:nth-of-type(6) h3::before {
-        content: '\f2e5';
-      }
-      // ::before icons for list ends
-
-
-    }
-
-  }
-
-  .restaurants {
-    min-height: 600px;
-    display: flex;
-
-    &__container {
-      @include flexCenter();
-      flex-direction: column;
-      margin: 0 auto;
-      padding: 80px 0;
-
-      &__body {
-        max-width: 800px;
-        text-align: center;
-      }
-    }
-
-    &__container__two-images {
-      position: relative;
-      max-width: 800px;
-      margin-top: 100px;
-    }
-    
-    &__container__image-container:nth-of-type(2) {
+.home-body {
+  .main {
+    h2::after {
+      content: '';
+      width: 42%;
+      border: 2px solid $primary-accent;
+      border-radius: 3px;
+  
       position: absolute;
-      max-width: 180px;
-      top: 0;
-      right: 0;
-      transform: translate(40%,-55%);
+      bottom: -40%;
+      left: 50%;
+      transform: translateX(-50%);
     }
-
-    &__container__image {
-      height: 100%;
-      width: 100%;
-    }
-  }
-
-
-  .gallery {
-    @include flexCenter();
-    flex-wrap: wrap;
-    align-content: center;
-    
-    &__image-container {
-      flex: 1 1 33.33%;
-      min-width: 300px;
-    }
-
-    &__image {
-      display: block;
-      width: 100%;
-      height: 100%;
-    }
-
-  }
-
-
-  .testimonials {
-    display: flex;
-    padding: 40px 0;
-    background: $accent-bg;
-    height: 60vh;
-    min-height: 700px;
-    max-height: 900px;
-
-    .wrapper {
-      display: flex;
-    }
-
-    &__container {
-      @include flexCenter();
-      flex-direction: column;
-      margin: auto auto;
-    }
-
-    &__container__body {
-      @include fontSerif(24);
-      font-style: italic;
-      max-width: 800px;
+  
+    .reci-container {
+  
+      &__card {
+        display: flex;
+        flex-wrap: wrap;
+        
+        &.card2 {
+          min-height: 580px;
+        }
+  
+        .item2 {
+          order: -1;
+        }
+      }
+  
+      &__card__item {
+        flex: 1 1 450px;
+      }
+  
+      &__card__item__image {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        object-position: bottom center;
+        margin: 0 auto;
+  
+        &.image2 {
+          object-position: bottom right;
+        }
+      }
+  
+      &__card__item:nth-of-type(2n) {
+        display: flex;
+        padding: 25px;
+      }
+  
+      &__card__item.item2 {
+        @include flexCenter();
+        flex-direction: column;
+        
+        p{
+          max-width: 500px;
+          text-align: center;
+        }
+        
+      }
+  
+      &__card__item.item4 {
+        @include flexCenter();
+        background: $secondary-bg;
+        padding-left: 65px;
+      }
+  
+      &__card__item__menu {
+        @include flexCenter();
+        align-items: start;
+        flex-wrap: wrap;
+        max-width: 500px;
+  
+        .menu-item {
+          flex: 1 1 40%;
+          min-width: 250px;
+        }
       
-      text-align: center;
-      letter-spacing: 0.6px;
-      line-height: 36px;
-
-      position: relative;
-
-      &::before, &::after {
-        @include fontSize(46);
-        font-family: "Font Awesome 5 Pro";
-        font-weight: 900;
-        font-style: normal;
-        color: lighten($accent-bg, 20%);
+        li:nth-of-type(odd) p {
+          margin-right: 25px;
+        }
+  
+        li p {
+          margin: 0;
+          margin-bottom: 10px;
+        }
+  
+        li h3 {
+          position: relative;
+          margin: 0 0 5px 0;
+        }
+        
+        // ::before icons for list starts
+        li h3::before {
+          position: absolute;
+          left: -30px;
+          font-family: "Font Awesome 5 Pro";
+          font-weight: 900;
+        }
+  
+        li:nth-of-type(1) h3::before {
+          content: '\f094';
+        }
+  
+        li:nth-of-type(2) h3::before {
+          content: '\f2e7';
+        }
+  
+        li:nth-of-type(3) h3::before {
+          content: '\f0f4';
+        }
+  
+        li:nth-of-type(4) h3::before {
+          content: '\f000';
+        }
+  
+        li:nth-of-type(5) h3::before {
+          content: '\f06c';
+        }
+  
+        li:nth-of-type(6) h3::before {
+          content: '\f2e5';
+        }
+        // ::before icons for list ends
+  
+  
+      }
+  
+    }
+  
+    .restaurants {
+      min-height: 600px;
+      display: flex;
+  
+      &__container {
+        @include flexCenter();
+        flex-direction: column;
+        margin: 0 auto;
+        padding: 80px 0;
+  
+        &__body {
+          max-width: 800px;
+          text-align: center;
+        }
+      }
+  
+      &__container__two-images {
+        position: relative;
+        max-width: 800px;
+        margin-top: 100px;
+      }
+      
+      &__container__image-container:nth-of-type(2) {
         position: absolute;
+        max-width: 180px;
+        top: 0;
+        right: 0;
+        transform: translate(40%,-55%);
       }
-
-      &::before {
-        content: '\f10d';
-        right: 104%;
-      }
-
-      &::after {
-        content: '\f10e';
-        left: 104%;
-        bottom: 20px;
+  
+      &__container__image {
+        height: 100%;
+        width: 100%;
       }
     }
-
-    &__container__arrows-container {
-      margin-top: 30px;
+  
+  
+    .gallery {
+      @include flexCenter();
+      flex-wrap: wrap;
+      align-content: center;
+      
+      &__image-container {
+        flex: 1 1 33.33%;
+        min-width: 300px;
+      }
+  
+      &__image {
+        display: block;
+        width: 100%;
+        height: 100%;
+      }
+  
     }
-
-    &__container__arrow {
-      background: none;
-      color: lighten($accent-bg, 20%);
-      font-size: 30px;
-      border: 0;
-      padding: 0;
-      margin: 20px;
+  
+  
+    .testimonials {
+      display: flex;
+      padding: 40px 0;
+      background: $accent-bg;
+      height: 60vh;
+      min-height: 700px;
+      max-height: 900px;
+  
+      .wrapper {
+        display: flex;
+      }
+  
+      &__container {
+        @include flexCenter();
+        flex-direction: column;
+        margin: auto auto;
+      }
+  
+      &__container__body {
+        @include fontSerif(24);
+        font-style: italic;
+        max-width: 800px;
+        
+        text-align: center;
+        letter-spacing: 0.6px;
+        line-height: 36px;
+  
+        position: relative;
+  
+        &::before, &::after {
+          @include fontSize(46);
+          font-family: "Font Awesome 5 Pro";
+          font-weight: 900;
+          font-style: normal;
+          color: lighten($accent-bg, 20%);
+          position: absolute;
+        }
+  
+        &::before {
+          content: '\f10d';
+          right: 104%;
+        }
+  
+        &::after {
+          content: '\f10e';
+          left: 104%;
+          bottom: 20px;
+        }
+      }
+  
+      &__container__arrows-container {
+        margin-top: 30px;
+      }
+  
+      &__container__arrow {
+        background: none;
+        color: lighten($accent-bg, 20%);
+        font-size: 30px;
+        border: 0;
+        padding: 0;
+        margin: 20px;
+      }
     }
+  
   }
-
 }

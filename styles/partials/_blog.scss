@@ -1,5 +1,63 @@
 .blog-body {
-  .main {
+  h1 {@include fontSize(38);margin:0 0 18px 0;}
+  h3 {@include fontSize(16);margin: 6px 0;}
+
+  .main {padding: 90px 0;}
+
+  .credits li {
+    @include fontSans(13);
+    display: inline-block;
+    padding: 0 10px;
     
+    a {
+      font-size: inherit;
+      text-transform: none;
+    }
+
+    &:nth-of-type(1) {
+      border-right: 1px solid $secondary-black;
+      padding-left: 0;
+    }
+
+    &:nth-of-type(3) {
+      border-left: 1px solid $secondary-black;
+      padding-right: 0;
+    }
+  }
+
+  .post__container, .post__socials, .post__author, .related {
+    border-bottom: 1px solid lighten( $primary-black, 70%);
+    padding: 30px 0;
+  }
+
+  .post {
+    p {margin: 20px 0;}
+  }
+
+  .post__socials {
+    a {
+      @include fontSerif(14, 400, lighten($primary-black, 40%));
+      text-transform: none;
+    }
+
+    &__tags li, &__container h3{
+      padding-right: 3px;
+    }
+
+    i {text-align: center;}
+  }
+
+  .post__socials h3,
+  .post__socials ul,
+  .post__socials ul li {
+    display: inline-block;
+  }
+
+  .post__author {
+    display: flex;
+  }
+
+  .related__container {
+    display: flex;
   }
 }
