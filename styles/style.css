@@ -263,6 +263,10 @@ ul, ol, li {
   list-style: none;
 }
 
+h1, h2, h3, a {
+  text-transform: uppercase;
+}
+
 a {
   font-size: 18px;
   font-size: 1.8rem;
@@ -270,8 +274,6 @@ a {
   font-weight: 700;
   color: #2e2e2e;
   letter-spacing: 0.5px;
-  font-family: 'Raleway', sans-serif;
-  text-transform: uppercase;
   text-decoration: none;
 }
 
@@ -310,7 +312,6 @@ h2 {
   color: #2e2e2e;
   letter-spacing: 0.5px;
   line-height: 36px;
-  text-transform: uppercase;
   position: relative;
 }
 
@@ -322,7 +323,6 @@ h3 {
   color: #2e2e2e;
   letter-spacing: 0.5px;
   line-height: 24px;
-  text-transform: uppercase;
 }
 
 p {
@@ -350,12 +350,12 @@ button:hover {
 
 .header {
   background: url(../assets/home-1.jpeg);
-  height: 70vh;
-  min-height: 400px;
-  max-height: 1200px;
   background-repeat: no-repeat;
   background-position: center top;
   background-size: cover;
+  height: 70vh;
+  min-height: 400px;
+  max-height: 1200px;
 }
 
 .header a, .header i {
@@ -392,6 +392,16 @@ button:hover {
   display: flex;
 }
 
+.blog-body .header {
+  background: url(../assets/blog-1.jpeg);
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: cover;
+  height: 35vh;
+  min-height: 400px;
+  max-height: 800px;
+}
+
 .main h2::after {
   content: '';
   width: 42%;
@@ -410,6 +420,10 @@ button:hover {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+}
+
+.main .reci-container__card.card2 {
+  min-height: 580px;
 }
 
 .main .reci-container__card .item2 {
@@ -443,7 +457,7 @@ button:hover {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding: 30px 40px;
+  padding: 25px;
 }
 
 .main .reci-container__card__item.item2 {
@@ -491,6 +505,9 @@ button:hover {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   max-width: 500px;
@@ -500,10 +517,11 @@ button:hover {
   -webkit-box-flex: 1;
       -ms-flex: 1 1 40%;
           flex: 1 1 40%;
+  min-width: 250px;
 }
 
-.main .reci-container__card__item__menu li:nth-of-type(2n) {
-  margin-left: 30px;
+.main .reci-container__card__item__menu li:nth-of-type(odd) p {
+  margin-right: 25px;
 }
 
 .main .reci-container__card__item__menu li p {
@@ -633,7 +651,7 @@ button:hover {
   padding: 40px 0;
   background: #dded9a;
   height: 60vh;
-  min-height: 500px;
+  min-height: 700px;
   max-height: 900px;
 }
 
@@ -820,8 +838,8 @@ button:hover {
 }
 
 .footer__container__socials button {
-  font-size: 24px;
-  font-size: 2.4rem;
+  font-size: 20px;
+  font-size: 2rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -871,6 +889,11 @@ button:hover {
   height: 40px;
 }
 
-.footer__copyright p {
+.footer__copyright p, .footer__copyright a {
+  font-size: 14px;
+  font-size: 1.4rem;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 400;
+  color: auto;
   margin: 0;
 }

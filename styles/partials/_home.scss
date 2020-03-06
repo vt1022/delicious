@@ -18,6 +18,10 @@
       display: flex;
       flex-wrap: wrap;
       
+      &.card2 {
+        min-height: 580px;
+      }
+
       .item2 {
         order: -1;
       }
@@ -41,7 +45,7 @@
 
     &__card__item:nth-of-type(2n) {
       display: flex;
-      padding: 30px 40px;
+      padding: 25px;
     }
 
     &__card__item.item2 {
@@ -63,15 +67,17 @@
 
     &__card__item__menu {
       @include flexCenter();
+      align-items: start;
       flex-wrap: wrap;
       max-width: 500px;
 
       .menu-item {
         flex: 1 1 40%;
+        min-width: 250px;
       }
     
-      li:nth-of-type(2n) {
-        margin-left: 30px;
+      li:nth-of-type(odd) p {
+        margin-right: 25px;
       }
 
       li p {
@@ -183,7 +189,7 @@
     padding: 40px 0;
     background: $accent-bg;
     height: 60vh;
-    min-height: 500px;
+    min-height: 700px;
     max-height: 900px;
 
     .wrapper {

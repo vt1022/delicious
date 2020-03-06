@@ -1,7 +1,4 @@
 .footer {
-  // display: flex;
-  // flex-direction: column;
-  // justify-content: space-between;
   background: $primary-black;
   
   h2, h3, a {
@@ -49,10 +46,7 @@
     }
 
     &__socials {
-      ::placeholder {
-        @include fontSerif(12);
-        font-style: italic;
-      }
+      ::placeholder {@include fontSerif(12);font-style: italic;}
 
       form {
         display: flex;
@@ -71,7 +65,7 @@
       }
 
       button {
-        @include fontSize(24);
+        @include fontSize(20);
         @include flexCenter();
         flex: 1 0 auto;
         background: $primary-accent;
@@ -102,7 +96,8 @@
     background: darken($primary-black, 5%);
     height: 40px;
 
-    p {
+    p, a {
+      @include fontSans(14, 400, auto);
       margin: 0;
     }
   }  

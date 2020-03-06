@@ -1,11 +1,11 @@
 .header {
   background: url(../assets/home-1.jpeg);
-  height: 70vh;
-  min-height: 400px;
-  max-height: 1200px;
   background-repeat: no-repeat;
   background-position: center top;
   background-size: cover;
+  height: 70vh;
+  min-height: 400px;
+  max-height: 1200px;
 
   a, i {
     @include fontSize(16);
@@ -27,4 +27,16 @@
     display: flex;
   }
   
+}
+
+.blog-body {
+  .header {
+    background: url(../assets/blog-1.jpeg);
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: cover;
+    height: 35vh;
+    min-height: 400px;
+    max-height: 800px;
+  }
 }
