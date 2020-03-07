@@ -5,12 +5,13 @@
   .main {padding: 90px 0;}
 
   .credits li {
-    @include fontSans(13);
+    @include fontSans(13, 400);
     display: inline-block;
-    padding: 0 10px;
+    padding: 0 7px;
     
     a {
       font-size: inherit;
+      font-weight: 400;
       text-transform: none;
     }
 
@@ -44,7 +45,9 @@
       padding-right: 3px;
     }
 
-    i {text-align: center;}
+    i {@include fontSize(16); text-align: center;}
+
+    &__share a {padding: 0 10px;}
   }
 
   .post__socials h3,
@@ -55,9 +58,93 @@
 
   .post__author {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    &__image-container {
+      margin: 10px 30px 10px;
+      flex: 0 0 auto;
+    }
+
+    &__about-container {
+      background: lighten($primary-black, 72%);
+      padding: 20px 30px;
+      margin: 10px 0;
+      flex: 1 1 300px;
+
+      p {margin: 10px 0;}
+    }
   }
 
-  .related__container {
-    display: flex;
+  .related {
+    h2 {
+      @include fontSize(19);
+      letter-spacing: 0.2px;
+      line-height: 21px;
+    }
+    
+    h3{margin-top: 0;}
+
+    &__container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      grid-gap: 20px;
+    }
+
+    &__article {
+      margin-top: 20px;
+
+      img {width: 100%;height: 100%;}
+
+      &__info {
+        li {
+          @include fontSerif(11);
+        }
+        a {@include fontSans(11, 400, $secondary-black)}
+      }
+    }
+  }
+
+  .comments {
+    padding: 25px 0;
+
+    &__card {
+      display: flex;
+      flex-wrap: wrap;
+
+      &__image-container {
+        margin-top: 20px;
+        margin-right: 25px;
+      }
+
+      &__body {
+        flex: 1 1 300px;
+        position: relative;
+        margin-top: 20px;
+        padding: 5px 18px;
+        background: lighten($primary-black, 72%);
+
+        p {margin: 5px 0;}
+
+        p span {@include fontSans(14)}
+
+        p:last-child{
+          @include fontSans(12, 400);
+          margin-top: 5px;
+        }
+
+        .arrow {
+          position: absolute;
+          top: 10px;
+          left: -18px;
+
+          border: 9px solid lighten($primary-black, 72%);
+          border-top-color: transparent;
+          border-left-color: transparent;
+          border-bottom-color: transparent;  
+        }
+      }
+      
+    }
   }
 }
