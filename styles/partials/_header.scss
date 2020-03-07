@@ -26,7 +26,25 @@
   .header__top-bar__nav {
     display: flex;
   }
-  
+
+  a[href='#cart'] {
+    position: relative;
+
+    span {
+      @include fontSans(11, 400, $primary-white);
+      display: inline-block;
+      position: absolute;
+      bottom: -3px;
+      right: 0;
+      padding-top: 1px;
+
+      background-color: $primary-accent;
+      width: 18px;
+      height: 18px;
+      text-align: center;
+      border-radius: 50%;
+    }
+  }
 }
 
 .blog-body {

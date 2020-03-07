@@ -146,5 +146,33 @@
       }
       
     }
+
+    &__form-container {
+      margin: 35px 0;
+    }
+
+    &__form {
+      fieldset {padding: 0; border: 0;}
+
+      input, textarea {
+        @include fontSerif(12);
+        border: 1px solid lighten($primary-black, 60%);
+        padding: 10px;
+      }
+
+      input:focus, textarea:focus {
+        border: 1px solid $primary-black;
+      }
+      
+      textarea {width: 100%;resize: none;}
+      
+      &__info {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        grid-gap: 10px;
+      }
+
+      &__comment-container {margin: 10px 0;}
+    }
   }
 }

@@ -16,7 +16,7 @@
         <h1>Delicious</h1>
         <nav>
           <ul class="header__top-bar__nav">
-            <li><a href="#home">Home</a></li>
+            <li><a href="index.html">Home</a></li>
             <li><a href="#about">About</a></li>
             <li><a href="#recipes">Recipes</a></li>
             <li><a href="#nutrition">Nutrition</a></li>
@@ -26,6 +26,7 @@
             <li>
               <a href="#cart" aria-label="go to your shopping cart">
                 <i class="fas fa-shopping-bag" aria-hidden></i>
+                <span aria-hidden aria-label="2 items in your cart">2</span>
               </a>
             </li>
             <li>
@@ -177,7 +178,28 @@
             </div>
           </div>
 
+          <div class="comments__form-container">
+            <h3>Leave a Comment</h3>
+            <p>Your email address will not be published. Required fields are marked *</p>
 
+            <form action="" class="comments__form">
+              <fieldset class="comments__form__info">
+                <label for="name" class="sr-only">Name</label>
+                <input type="text" id="name" name="name" placeholder="Name *" required>
+                <label for="email" class="sr-only">Email</label>
+                <input type="email" id="email" name="email" placeholder="Email *" required>
+                <label for="website" class="sr-only">Website</label>
+                <input type="text" id="website" name="website" placeholder="Your Website">
+              </fieldset>
+
+              <fieldset class="comments__form__comment-container">
+                <label for="comment" class="sr-only">Comment</label>
+                <textarea name="comment" id="comment" cols="30" rows="10" placeholder="Comment"></textarea>
+              </fieldset>
+              <button class="button" type="submit">Submit Comment</button>
+            </form>
+
+          </div>
         </section>
       </div><!--wrapper-->
     </main>

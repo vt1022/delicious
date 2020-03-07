@@ -348,11 +348,16 @@ p {
   letter-spacing: 0.3px;
 }
 
-.button {
+.button, button {
   font-size: 14px;
   font-size: 1.4rem;
   color: #f6f6f6;
   background: #64a604;
+  border: 1px solid transparent;
+  text-transform: uppercase;
+}
+
+.button {
   padding: 16px 30px;
   margin-top: 15px;
 }
@@ -403,6 +408,28 @@ button:hover {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+.header a[href='#cart'] {
+  position: relative;
+}
+
+.header a[href='#cart'] span {
+  font-size: 11px;
+  font-size: 1.1rem;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 400;
+  color: #f6f6f6;
+  display: inline-block;
+  position: absolute;
+  bottom: -3px;
+  right: 0;
+  padding-top: 1px;
+  background-color: #64a604;
+  width: 18px;
+  height: 18px;
+  text-align: center;
+  border-radius: 50%;
 }
 
 .blog-body .header {
@@ -949,6 +976,46 @@ button:hover {
   border-top-color: transparent;
   border-left-color: transparent;
   border-bottom-color: transparent;
+}
+
+.blog-body .comments__form-container {
+  margin: 35px 0;
+}
+
+.blog-body .comments__form fieldset {
+  padding: 0;
+  border: 0;
+}
+
+.blog-body .comments__form input, .blog-body .comments__form textarea {
+  font-size: 12px;
+  font-size: 1.2rem;
+  font-family: 'Lora', serif;
+  font-weight: 400;
+  color: #2e2e2e;
+  border: 1px solid #c7c7c7;
+  padding: 10px;
+}
+
+.blog-body .comments__form input:focus, .blog-body .comments__form textarea:focus {
+  border: 1px solid #2e2e2e;
+}
+
+.blog-body .comments__form textarea {
+  width: 100%;
+  resize: none;
+}
+
+.blog-body .comments__form__info {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(150px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  grid-gap: 10px;
+}
+
+.blog-body .comments__form__comment-container {
+  margin: 10px 0;
 }
 
 .footer {
