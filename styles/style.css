@@ -1053,24 +1053,24 @@ textarea {
           flex: 1 1 65%;
 }
 
-.contact-body .main .container__form__name-email {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+.contact-body .main .container__form fieldset {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  grid-gap: 10px;
 }
 
-.contact-body .main .container__form__name-email input {
-  -webkit-box-flex: 1;
-      -ms-flex: 1 1 200px;
-          flex: 1 1 200px;
+.contact-body .main .container__form input[name="subject"] {
+  -ms-grid-row: 2;
+  grid-row: 2;
+  grid-column: span 2;
 }
 
-.contact-body .main .container__form input[name='subject'] {
-  width: 100%;
-}
-
-.contact-body .main .container__form input, .contact-body .main .container__form textarea {
-  margin: 10px 0;
+.contact-body .main .container__form textarea {
+  -ms-grid-row: 3;
+  grid-row: 3;
+  grid-column: span 2;
 }
 
 .contact-body .main .container__contact {
@@ -1079,7 +1079,6 @@ textarea {
   -webkit-box-flex: 1;
       -ms-flex: 1 0 200px;
           flex: 1 0 200px;
-  max-width: 310px;
 }
 
 .contact-body .main .image {

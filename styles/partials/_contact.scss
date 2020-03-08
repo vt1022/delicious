@@ -15,30 +15,32 @@
         // padding-right: 0;
         flex: 1 1 65%;
 
-        &__name-email {
-          display: flex;
-
-          input{
-            flex: 1 1 200px;
-          }
+        fieldset {
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          grid-gap: 10px;
         }
 
-        input[name='subject'] {
-          width: 100%;
+        input[name="name"],
+        input[name="email"] {
+
         }
 
-        input, textarea {
-          margin: 10px 0;
+        input[name="subject"] {
+          grid-row: 2;
+          grid-column: span 2;
         }
 
+        textarea {
+          grid-row: 3;
+          grid-column: span 2;
+        }
       }
 
       &__contact {
         background: darken($primary-white, 8%);
         padding-right: 0;
         flex: 1 0 200px;
-        max-width: 310px;
-        // margin-left: 30px;
       }
     }
 
