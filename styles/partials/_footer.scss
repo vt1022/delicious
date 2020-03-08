@@ -11,8 +11,8 @@
 
   &__container {
     display: flex;
-    flex-wrap: wrap;
     justify-content: space-between;
+    flex-wrap: wrap;
     padding-top: 50px;
 
     &__contact, &__articles, &__socials {
@@ -30,10 +30,7 @@
         line-height: 24px;
       }
 
-      li:nth-of-type(2) > .exclude {
-        padding: 0;
-        margin: 0;
-      }
+      li:nth-of-type(2) > .exclude {margin: 0;padding: 0;}
 
       p:not(.exclude), a:not(.exclude) {border-bottom: 2px solid lighten( $primary-black, 10%);}
     }
@@ -41,8 +38,10 @@
     &__articles {
       margin-left: 3%;
       margin-right: 3%;
+
       a {
         @include fontSerif(14);
+
         display: block;
         color: lighten($primary-black, 55%);
         text-transform: none;
@@ -64,27 +63,30 @@
         font-size: 0; //font sz remove the white space between form elements
       } 
       input, button {
-        padding: 12px 17px;
         height: 40px;
+        padding: 12px 17px;
         vertical-align: middle;
       }
 
       input {
         @include fontSize(12);
-        color: $primary-white;
-        background: lighten($secondary-black, 10%);
+        
         width: 85%;
         border: 1px solid transparent;
+        
+        background: lighten($secondary-black, 10%);
+        color: $primary-white;
         
         &:focus {border: 1px solid $primary-white;}
       }
 
       button {
-        @include fontSize(20);
         @include flexCenter();
+        @include fontSize(20);
+
         flex: 1 0 auto;
-        background: $primary-accent;
         border: 1px solid $primary-accent;
+        background: $primary-accent;
 
         &:hover i, &:focus i {color: $secondary-black;}
       }
@@ -93,25 +95,17 @@
         display: flex;
         margin-top: 5px;
 
-        li {
-          margin: 5px;
-        }
-
-        li:first-of-type {
-          margin-left: 0;
-        }
-
-        a {
-          padding: 3px 8px;
-        }
+        li {margin: 5px;}
+        li:first-of-type {margin-left: 0;}
+        a {padding: 3px 8px;}
       }
     }
   }
 
   &__copyright {
     @include flexCenter();
-    background: darken($primary-black, 5%);
     height: 40px;
+    background: darken($primary-black, 5%);
 
     p, a {
       @include fontSans(14, 400, auto);

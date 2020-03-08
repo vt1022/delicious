@@ -1,23 +1,24 @@
 .header {
-  background: url(../assets/home-1.jpeg);
-  background-repeat: no-repeat;
-  background-position: center top;
-  background-size: cover;
   height: 70vh;
   min-height: 400px;
   max-height: 1200px;
 
+  background: url(../assets/home-1.jpeg);
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: cover;
 
-  /* hamburger starts */
+
+  // hamburger starts
   nav label {
+    position: fixed;
     top: -200%;
     right: 20px;
     transition: 0.5s;
-    position: fixed;
   }
 
   nav input{ display: none; }
-  /* hamburger ends */
+  // hamburger ends
 
   a, i {
     @include fontSize(16);
@@ -25,13 +26,11 @@
     text-transform: uppercase;
   }
 
-  a:hover, a:focus {
-    color: $primary-accent;
-  }
+  a:hover, a:focus {color: $primary-accent;}
   
   a {
-    padding: 6px 10px;
     display: inline-block;
+    padding: 6px 10px;
   }
 
   .header__top-bar {
@@ -40,26 +39,26 @@
     flex-wrap: wrap;
   }
   
-  .header__top-bar__nav {
-    display: flex;
-  }
+  .header__top-bar__nav {display: flex;}
 
   a[href='#cart'] {
     position: relative;
 
     span {
       @include fontSans(11, 400, $primary-white);
+
       display: inline-block;
       position: absolute;
       bottom: -3px;
       right: 0;
-      padding-top: 1px;
 
-      background-color: $primary-accent;
+      padding-top: 1px;
       width: 18px;
       height: 18px;
-      text-align: center;
       border-radius: 50%;
+
+      background-color: $primary-accent;
+      text-align: center;
     }
   }
 }
@@ -67,13 +66,14 @@
 .blog-body, 
 .contact-body {
   .header {
+    height: 35vh;
+    min-height: 400px;
+    max-height: 800px;
+
     background: url(../assets/blog-1.jpeg);
     background-repeat: no-repeat;
     background-position: center top;
     background-size: cover;
-    height: 35vh;
-    min-height: 400px;
-    max-height: 800px;  
   }
 }
 
