@@ -1,7 +1,6 @@
 ::selection { color: turquoise; }
-
+:focus {@include focusState();}
 body {background: $primary-white;}
-
 img {display: block;}
 
 ul, ol, li {
@@ -20,8 +19,8 @@ a {
 
 a, i {transition: all .2s ease-in;}
 
-a:hover, a:focus,
-a:hover i, a:focus i {
+a:hover,
+a:hover i{
   color: $primary-accent;
 }
 
@@ -84,11 +83,12 @@ p {
 button, .button {
   transition: all .2s ease-in;
 
-  &:hover, &:focus {
+  &:hover {
     background: none;
     color: $primary-accent;
     cursor: pointer;
   }
+  &:focus {@include focusState();}
 }
 
 fieldset {margin: 0; padding: 0; border: 0;}
@@ -99,6 +99,6 @@ input, textarea {
   border: 1px solid lighten($primary-black, 60%);
 }
 
-input:focus, textarea:focus {border: 1px solid $primary-black;}
+input:focus, textarea:focus {border: 1px solid $primary-black;outline: none;}
 
 textarea {width: 100%;resize: none;}

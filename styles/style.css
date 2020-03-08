@@ -257,6 +257,10 @@ html {
   color: turquoise;
 }
 
+:focus {
+  outline: 3px dotted #DC1570;
+}
+
 body {
   background: #f6f6f6;
 }
@@ -290,8 +294,8 @@ a, i {
   transition: all .2s ease-in;
 }
 
-a:hover, a:focus,
-a:hover i, a:focus i {
+a:hover,
+a:hover i {
   color: #64a604;
 }
 
@@ -377,10 +381,14 @@ button, .button {
   transition: all .2s ease-in;
 }
 
-button:hover, button:focus, .button:hover, .button:focus {
+button:hover, .button:hover {
   background: none;
   color: #64a604;
   cursor: pointer;
+}
+
+button:focus, .button:focus {
+  outline: 3px dotted #DC1570;
 }
 
 fieldset {
@@ -401,6 +409,7 @@ input, textarea {
 
 input:focus, textarea:focus {
   border: 1px solid #2e2e2e;
+  outline: none;
 }
 
 textarea {
@@ -838,8 +847,12 @@ textarea {
   font-size: 30px;
 }
 
-.home-body .main .testimonials__container__arrow:hover i, .home-body .main .testimonials__container__arrow:focus i {
+.home-body .main .testimonials__container__arrow:hover i {
   color: #64a604;
+}
+
+.home-body .main .testimonials__container__arrow:focus i {
+  outline: 3px dotted #DC1570;
 }
 
 .blog-body .main {
@@ -1279,7 +1292,7 @@ textarea {
   text-transform: none;
 }
 
-.footer__container__articles a:hover, .footer__container__articles a:focus {
+.footer__container__articles a:hover {
   color: #64a604;
 }
 
@@ -1368,6 +1381,10 @@ textarea {
 
 .footer__container__socials button:hover i, .footer__container__socials button:focus i {
   color: #333333;
+}
+
+.footer__container__socials button:focus {
+  outline: 3px dotted #DC1570;
 }
 
 .footer__container__socials__nav {

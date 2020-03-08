@@ -46,7 +46,7 @@
         color: lighten($primary-black, 55%);
         text-transform: none;
         
-        &:hover, &:focus {color: $primary-accent;}
+        &:hover{color: $primary-accent;}
       }
     }
 
@@ -89,6 +89,7 @@
         background: $primary-accent;
 
         &:hover i, &:focus i {color: $secondary-black;}
+        &:focus {@include focusState();}
       }
 
       &__nav {

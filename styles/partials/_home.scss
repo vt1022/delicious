@@ -219,7 +219,8 @@
         color: lighten($accent-bg, 20%);
         font-size: 30px;
 
-        &:hover i, &:focus i {color: $primary-accent;}
+        &:hover i {color: $primary-accent;}
+        &:focus i {@include focusState();}
       }
     }
   }
