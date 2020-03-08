@@ -46,6 +46,7 @@ $accent-bg: #dded9a;
 @mixin focusState() {
     outline: 3px dotted $secondary-accent;
 }
+
 // might be useful
 @mixin position($type, $top: auto, $bottom: auto, $left: auto, $right: auto) {
   position: $type;

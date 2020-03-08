@@ -1,5 +1,6 @@
 ::selection { color: turquoise; }
 :focus {@include focusState();}
+html {scroll-behavior: smooth;}
 body {background: $primary-white;}
 img {display: block;}
 
@@ -97,6 +98,7 @@ input, textarea {
   @include fontSerif(12);
   padding: 10px;
   border: 1px solid lighten($primary-black, 60%);
+  transition: all .3s ease-in;
 }
 
 input:focus, textarea:focus {border: 1px solid $primary-black;outline: none;}
