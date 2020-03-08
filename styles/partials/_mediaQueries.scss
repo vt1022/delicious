@@ -1,45 +1,44 @@
 
 @media (max-width: 1060px) {
-  .header {
-    a, i {
-      @include fontSize(14);
-    }
-  }
+  .header {a, i {@include fontSize(14);}}
 }
 
 @media (max-width: 925px) {
-  
+  // show hamburger
   .header {
     nav {
       /* hamburger starts */
       ul { 
-        flex-direction: column;
-        height: 0;
-        width: 100%;
+        position: absolute;
         left: 0;
         top: -200%;
         right: 0;
+        
+        flex-direction: column;
+        height: 0;
+        width: 100%;
+        
         overflow: hidden;
         transition: 0.3s linear;
-        position: absolute;
       }
 
       label { top: 20px; z-index: 3;} 
 
       .hamburger {
-        width: calc(14vw + 1px);
         position: relative;
+        width: calc(14vw + 1px);
       }
 
       .hamburger-lines {
-        margin: 12px 0;
-        background: #fff;
         width: 100%;
         height: 5px;
-        
         border: 1px solid black;
         border-radius: 4px;
+        margin: 12px 0;
+        
+        background: #fff;
         filter: drop-shadow(1px 1px 0px black);
+        
         transition: 0.2s ease;
       }
 
@@ -51,9 +50,9 @@
       }
 
       input[name="toggle"]:checked + label > .hamburger > .line2 {
-        opacity: 0;
-        transform: rotate(360deg) translate(10px, 30px);
         border: transparent;
+        transform: rotate(360deg) translate(10px, 30px);
+        opacity: 0;
       }
 
       input[name="toggle"]:checked + label > .hamburger > .line3 {
@@ -63,20 +62,20 @@
 
       input[name="toggle"]:checked ~ ul:first-of-type {
         position: fixed;
+        z-index: 1;
+        top: 0;
+        
         height: auto;
         width: 100%;
-        top: 0;
 
         background: $accent-bg;
-        z-index: 1;
       }
 
       .header__top-bar__nav li {
-
         display: inline-block;
         padding: 6px 0;
-        text-align: center;
         border-bottom: 2px solid lighten( $primary-black, 80%);
+        text-align: center;
       }
 
       .header__top-bar__nav li:last-of-type { border-bottom: none; }
@@ -100,6 +99,7 @@
       padding: 10px 20%;
     }
 
+    // fix notification icon in nav
     a[href="#cart"] span {
       @include fontSize(13);
       bottom: 5px;
@@ -110,6 +110,7 @@
   }
 
   .home-body {
+    // style the blockquotes to prevent side scroll
     .main {
       .testimonials__container__body {
         @include fontSize(18);
@@ -120,14 +121,9 @@
           opacity: 60%;
         }
 
-        &::before {
-          right: calc(100% - 30px);
-        }
+        &::before {right: calc(100% - 30px);}
   
-        &::after {
-          left: calc(100% - 30px);
-          bottom: 20px;
-        }
+        &::after {left: calc(100% - 30px);bottom: 20px;}
       }
     }
   }
@@ -135,12 +131,12 @@
 
 
 @media (max-width: 914px) {
+  // change order when stacked
   .home-body .main .reci-container__card .item2 {order: 1;}
 }
 
 
 @media (max-width: 824px) {
-
   .contact-body {
     .main {
       .container {
@@ -158,26 +154,25 @@
 
 
 @media (max-width: 624px) {
-  
+  .header {h1 {@include fontSize(30);}}
+
   .home-body {
+    // take off margins when vertically stacked
     .main {
-      .reci-container__card__item__menu li:nth-of-type(2n + 1) p {
-        margin-right: 0;
-      }
+      .reci-container__card__item__menu li:nth-of-type(2n + 1) p {margin-right: 0;}
 
       .restaurants__container__two-images {
         margin-top: 30px;
         margin-right: 40px;
       }
 
-      .restaurants__container__image-container:nth-of-type(2) {
-        max-width: 130px;
-      }
+      .restaurants__container__image-container:nth-of-type(2) {max-width: 130px;}
     }
   }
 
 
   .contact-body {
+    // style form on smaller screens
     .main {
       .container {
         &__form {
@@ -196,10 +191,12 @@
 
   }
 
+  .footer__container__articles {margin-left: 0;margin-right: 0;}
   .footer__copyright p, .footer__copyright a {@include fontSize(10);}
 }
 
 @media (max-width:541px) {
+  // change quote boxes arrows to point up
   .blog-body .comments__card__body .arrow {
     top: -18px;
     left: 10px;
