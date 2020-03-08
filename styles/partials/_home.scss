@@ -247,6 +247,8 @@
         border: 0;
         padding: 0;
         margin: 20px;
+
+        &:hover i, &:focus i {color: $primary-accent;}
       }
     }
   

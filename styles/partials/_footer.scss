@@ -7,7 +7,6 @@
   }
 
   h3, i {color: $primary-white;}
-
   p {color: lighten($primary-black, 55%);}
 
   &__container {
@@ -25,9 +24,10 @@
     }
 
     &__contact, &__articles {
-      p {
+      p, a {
         padding-bottom: 8px;
         margin: 5px 0;
+        line-height: 24px;
       }
 
       li:nth-of-type(2) > .exclude {
@@ -35,12 +35,20 @@
         margin: 0;
       }
 
-      p:not(.exclude) {border-bottom: 2px solid lighten( $primary-black, 10%);}
+      p:not(.exclude), a:not(.exclude) {border-bottom: 2px solid lighten( $primary-black, 10%);}
     }
 
     &__articles {
       margin-left: 3%;
       margin-right: 3%;
+      a {
+        @include fontSerif(14);
+        display: block;
+        color: lighten($primary-black, 55%);
+        text-transform: none;
+        
+        &:hover, &:focus {color: $primary-accent;}
+      }
     }
 
     &__socials {
@@ -77,6 +85,8 @@
         flex: 1 0 auto;
         background: $primary-accent;
         border: 1px solid $primary-accent;
+
+        &:hover i, &:focus i {color: $secondary-black;}
       }
 
       &__nav {

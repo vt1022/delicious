@@ -18,7 +18,10 @@ a {
   text-decoration: none;
 }
 
-a:hover, a:focus {
+a, i {transition: all .2s ease-in;}
+
+a:hover, a:focus,
+a:hover i, a:focus i {
   color: $primary-accent;
 }
 
@@ -82,11 +85,16 @@ p {
   margin-top: 15px;
 }
 
-button:hover {
-  cursor: pointer;
+button, .button {
+  transition: all .2s ease-in;
+  &:hover, &:focus {
+    cursor: pointer;
+    background: none;
+    color: $primary-accent;
+  }
 }
 
-fieldset {padding: 0; border: 0;}
+fieldset {margin: 0; padding: 0; border: 0;}
 
 input, textarea {
   @include fontSerif(12);

@@ -3,6 +3,8 @@
   .main {
     background: linear-gradient(90deg, $primary-white 0%, $primary-white 70%, darken($primary-white, 3%) 70%, darken($primary-white, 3%) 70%);
     
+    h1,h2{@include fontSize(22);}
+
     .container {
       display: flex;
       flex-wrap: wrap;
@@ -44,6 +46,14 @@
         background: darken($primary-white, 3%);
         padding-right: 0;
         flex: 1 0 214px;
+
+        .days {@include fontSans(13, 400);}
+        .note {@include fontSize(11);font-style: italic;}
+        .address {display: block;}
+
+        &__card {margin-bottom: 35px;}
+        &__card.card2 p {margin: 0;}
+        &__card.card3 p {margin-bottom: 23px;}
       }
     }
 

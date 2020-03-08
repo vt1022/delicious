@@ -96,12 +96,15 @@
     &__article {
       margin-top: 20px;
 
-      img {width: 100%;height: 100%;}
+      img {width: 100%;height: 100%;object-fit: contain;}
+      h2 {transition: all .2s ease-in;}
+      &__image-container {overflow: hidden;}
+      &__image-container img {transition: all .2s ease-in;}
+      a:hover img, a:focus img{transform: scale(1.5);}
+      a:hover h2, a:focus h2{color: $primary-accent;}
 
       &__info {
-        li {
-          @include fontSerif(11);
-        }
+        li {@include fontSerif(11);}
         a {@include fontSans(11, 400, $secondary-black)}
       }
     }

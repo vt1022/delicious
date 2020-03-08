@@ -25,7 +25,11 @@
     text-transform: uppercase;
   }
 
-  a, .fa-search {
+  a:hover, a:focus {
+    color: $primary-accent;
+  }
+  
+  a {
     padding: 6px 10px;
     display: inline-block;
   }

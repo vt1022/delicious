@@ -39,7 +39,7 @@
         
         border: 1px solid black;
         border-radius: 4px;
-        filter: drop-shadow(1px 1px 1px black);
+        filter: drop-shadow(1px 1px 0px black);
         transition: 0.2s ease;
       }
 
@@ -52,7 +52,7 @@
 
       input[name="toggle"]:checked + label > .hamburger > .line2 {
         opacity: 0;
-        transform: rotate(360deg);
+        transform: rotate(360deg) translate(10px, 30px);
         border: transparent;
       }
 
@@ -76,7 +76,7 @@
         display: inline-block;
         padding: 6px 0;
         text-align: center;
-        border-bottom: 2px solid #ACACAC;
+        border-bottom: 2px solid lighten( $primary-black, 80%);
       }
 
       .header__top-bar__nav li:last-of-type { border-bottom: none; }
@@ -163,10 +163,6 @@
     .main {
       .reci-container__card__item__menu li:nth-of-type(2n + 1) p {
         margin-right: 0;
-      }
-
-      .reci-container__card__item__menu .menu-item {
-        // min-width: 200px;
       }
 
       .restaurants__container__two-images {

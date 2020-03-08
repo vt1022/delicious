@@ -15,6 +15,7 @@
       <div class="header__top-bar header-wrapper">
         <h1>Delicious</h1>
         <nav>
+          <a href="#main" class="skip-link">skip to main content</a>
           <!-- hamburger checkbox starts -->
           <input type="checkbox" id="toggle" name="toggle">
           <label for="toggle" class="toggle">
@@ -49,7 +50,7 @@
       </div>
     </header>
 
-    <main class="main">
+    <main class="main" id="main">
       <div class="wrapper--75">
         <div class="container">
           <div class="container__form">
@@ -79,13 +80,12 @@
             </div>
             <div class="container__contact__card card2">
               <h3>Working Hours</h3>
-              <p>MON - FRI: 08:00am - 05:30pm</p>
-              <p>Not working on Saturday and Sunday</p>
+              <p><span class="days">MON - FRI </span>: 08:00am - 05:30pm</p>
+              <p class="note">Not working on Saturday and Sunday!</p>
             </div>
             <div class="container__contact__card card3">
               <h3>Contact Info</h3>
-              <p>A delicious restaurant</p>
-              <p>Toronto, Ontario</p>
+              <p>A delicious restaurant <span class="address">Toronto, Ontario</span></p>
               <p>yum@food.com</p>
               <p>+1 234 567 8910</p>
             </div>
