@@ -1,7 +1,7 @@
 .contact-body {
 
   .main {
-    background: linear-gradient(90deg, $primary-white 0%, $primary-white 70%, darken($primary-white, 8%) 70%, darken($primary-white, 8%) 70%);
+    background: linear-gradient(90deg, $primary-white 0%, $primary-white 70%, darken($primary-white, 3%) 70%, darken($primary-white, 3%) 70%);
     
     .container {
       display: flex;
@@ -12,18 +12,21 @@
 
       &__form {
         padding-left: 0;
-        // padding-right: 0;
         flex: 1 1 65%;
 
-        fieldset {
+        &__field {
           display: grid;
           grid-template-columns: repeat(2, 1fr);
-          grid-gap: 10px;
+          grid-gap: 20px;
         }
 
-        input[name="name"],
-        input[name="email"] {
+        input, textarea {
+          background: darken($primary-white, 10%);
+          border: 1px solid transparent;
 
+          &:focus {
+            border: 1px solid $primary-black;
+          }
         }
 
         input[name="subject"] {
@@ -38,9 +41,9 @@
       }
 
       &__contact {
-        background: darken($primary-white, 8%);
+        background: darken($primary-white, 3%);
         padding-right: 0;
-        flex: 1 0 200px;
+        flex: 1 0 214px;
       }
     }
 
@@ -50,6 +53,7 @@
       background-position: right top;
       background-size: cover;
       height: 35vh;
+      max-height: 600px;
       min-height: 300px;
     }
   }

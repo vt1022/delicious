@@ -7,6 +7,18 @@
   min-height: 400px;
   max-height: 1200px;
 
+
+  /* hamburger starts */
+  nav label {
+    top: -200%;
+    right: 20px;
+    transition: 0.5s;
+    position: fixed;
+  }
+  
+  nav input{ display: none; }
+  /* hamburger ends */
+
   a, i {
     @include fontSize(16);
     text-transform: uppercase;

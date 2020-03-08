@@ -148,6 +148,7 @@
         position: relative;
         max-width: 800px;
         margin-top: 100px;
+        margin-right: 50px;
       }
       
       &__container__image-container:nth-of-type(2) {
@@ -205,7 +206,8 @@
         @include fontSerif(24);
         font-style: italic;
         max-width: 800px;
-        
+        padding: 0 40px;
+
         text-align: center;
         letter-spacing: 0.6px;
         line-height: 36px;
@@ -223,12 +225,12 @@
   
         &::before {
           content: '\f10d';
-          right: 104%;
+          right: 100%;
         }
   
         &::after {
           content: '\f10e';
-          left: 104%;
+          left: 100%;
           bottom: 20px;
         }
       }

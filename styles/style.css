@@ -398,6 +398,20 @@ textarea {
   height: 70vh;
   min-height: 400px;
   max-height: 1200px;
+  /* hamburger starts */
+  /* hamburger ends */
+}
+
+.header nav label {
+  top: -200%;
+  right: 20px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  position: fixed;
+}
+
+.header nav input {
+  display: none;
 }
 
 .header a, .header i {
@@ -671,6 +685,7 @@ textarea {
   position: relative;
   max-width: 800px;
   margin-top: 100px;
+  margin-right: 50px;
 }
 
 .home-body .main .restaurants__container__image-container:nth-of-type(2) {
@@ -757,6 +772,7 @@ textarea {
   color: #2e2e2e;
   font-style: italic;
   max-width: 800px;
+  padding: 0 40px;
   text-align: center;
   letter-spacing: 0.6px;
   line-height: 36px;
@@ -775,12 +791,12 @@ textarea {
 
 .home-body .main .testimonials__container__body::before {
   content: '\f10d';
-  right: 104%;
+  right: 100%;
 }
 
 .home-body .main .testimonials__container__body::after {
   content: '\f10e';
-  left: 104%;
+  left: 100%;
   bottom: 20px;
 }
 
@@ -1027,8 +1043,8 @@ textarea {
 }
 
 .contact-body .main {
-  background: -webkit-gradient(linear, left top, right top, from(#f6f6f6), color-stop(70%, #f6f6f6), color-stop(70%, #e2e2e2), color-stop(70%, #e2e2e2));
-  background: linear-gradient(90deg, #f6f6f6 0%, #f6f6f6 70%, #e2e2e2 70%, #e2e2e2 70%);
+  background: -webkit-gradient(linear, left top, right top, from(#f6f6f6), color-stop(70%, #f6f6f6), color-stop(70%, #eeeeee), color-stop(70%, #eeeeee));
+  background: linear-gradient(90deg, #f6f6f6 0%, #f6f6f6 70%, #eeeeee 70%, #eeeeee 70%);
 }
 
 .contact-body .main .container {
@@ -1053,12 +1069,21 @@ textarea {
           flex: 1 1 65%;
 }
 
-.contact-body .main .container__form fieldset {
+.contact-body .main .container__form__field {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (1fr)[2];
       grid-template-columns: repeat(2, 1fr);
-  grid-gap: 10px;
+  grid-gap: 20px;
+}
+
+.contact-body .main .container__form input, .contact-body .main .container__form textarea {
+  background: #dddddd;
+  border: 1px solid transparent;
+}
+
+.contact-body .main .container__form input:focus, .contact-body .main .container__form textarea:focus {
+  border: 1px solid #2e2e2e;
 }
 
 .contact-body .main .container__form input[name="subject"] {
@@ -1074,11 +1099,11 @@ textarea {
 }
 
 .contact-body .main .container__contact {
-  background: #e2e2e2;
+  background: #eeeeee;
   padding-right: 0;
   -webkit-box-flex: 1;
-      -ms-flex: 1 0 200px;
-          flex: 1 0 200px;
+      -ms-flex: 1 0 214px;
+          flex: 1 0 214px;
 }
 
 .contact-body .main .image {
@@ -1087,6 +1112,7 @@ textarea {
   background-position: right top;
   background-size: cover;
   height: 35vh;
+  max-height: 600px;
   min-height: 300px;
 }
 
@@ -1273,4 +1299,143 @@ textarea {
   font-weight: 400;
   color: auto;
   margin: 0;
+}
+
+@media (max-width: 1060px) {
+  .header a, .header i {
+    font-size: 14px;
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width: 925px) {
+  .header nav {
+    /* hamburger starts */
+    /* hamburger animation starts */
+    /* hamburger animation ends */
+    /* hamburger ends */
+  }
+  .header nav ul, .header nav a {
+    height: 0;
+    width: 100%;
+    left: 0;
+    top: -200%;
+    right: 0;
+    overflow: hidden;
+    -webkit-transition: 0.3s linear;
+    transition: 0.3s linear;
+    position: absolute;
+  }
+  .header nav label {
+    top: 20px;
+    z-index: 3;
+  }
+  .header nav .hamburger {
+    width: calc(14vw + 1px);
+    position: relative;
+  }
+  .header nav .hamburger-lines {
+    margin: 12px 0;
+    background: #fff;
+    width: 100%;
+    height: 5px;
+    border: 1px solid black;
+    border-radius: 4px;
+    -webkit-filter: drop-shadow(1px 1px 1px black);
+            filter: drop-shadow(1px 1px 1px black);
+    -webkit-transition: 0.2s ease;
+    transition: 0.2s ease;
+  }
+  .header nav .header__top-bar__nav {
+    padding: 5px;
+  }
+  .header nav .hamburger:active .hamburger-lines {
+    -webkit-transform: translateY(-10px);
+            transform: translateY(-10px);
+  }
+  .header nav input[name="toggle"]:checked + label > .hamburger > .line1 {
+    -webkit-transform: rotate(45deg) translate(30px, 20px);
+            transform: rotate(45deg) translate(30px, 20px);
+  }
+  .header nav input[name="toggle"]:checked + label > .hamburger > .line2 {
+    opacity: 0;
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+    border: transparent;
+  }
+  .header nav input[name="toggle"]:checked + label > .hamburger > .line3 {
+    -webkit-transform: rotate(-45deg) translate(5px, 5px);
+            transform: rotate(-45deg) translate(5px, 5px);
+  }
+  .header nav input[name="toggle"]:checked ~ ul:first-of-type {
+    position: fixed;
+    height: auto;
+    width: 100%;
+    top: 0;
+    background: #183399;
+    z-index: 1;
+  }
+  .header nav .header__top-bar__nav li {
+    display: block;
+    padding: 30px 0;
+    text-align: center;
+    border-bottom: 2px solid #ACACAC;
+  }
+  .header nav .header__top-bar__nav li:first-of-type {
+    border-top: 2px solid #ACACAC;
+  }
+  .header nav .header__top-bar__nav a {
+    font-size: 4rem;
+    padding: 20px 20%;
+  }
+  .header nav .header__top-bar__nav a:hover::after,
+  .header nav .header__top-bar__nav a:focus::after {
+    width: 40%;
+    left: 50%;
+    bottom: 20%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+    background: -webkit-gradient(linear, left top, right top, from(#FCFCFC), to(#183399));
+    background: linear-gradient(to right, #FCFCFC, #183399);
+  }
+  .header nav .hamburger:hover, .header nav .hamburger:focus {
+    cursor: pointer;
+  }
+  .home-body .main .testimonials__container__body {
+    font-size: 18px;
+    font-size: 1.8rem;
+    padding: 0 20px;
+  }
+  .home-body .main .testimonials__container__body::before, .home-body .main .testimonials__container__body::after {
+    font-size: 30px;
+    font-size: 3rem;
+  }
+  .home-body .main .testimonials__container__body::before {
+    right: calc(100%);
+  }
+  .home-body .main .testimonials__container__body::after {
+    left: calc(100%);
+    bottom: 20px;
+  }
+}
+
+@media (max-width: 824px) {
+  .contact-body .main .container__form {
+    padding-right: 0px;
+  }
+  .contact-body .main .container__form__field {
+    grid-gap: 10px;
+  }
+}
+
+@media (max-width: 624px) {
+  .contact-body .main .container__form__field {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    grid-gap: 10px;
+  }
+  .contact-body .main .container__form input[name="subject"], .contact-body .main .container__form textarea {
+    grid-row: auto;
+    grid-column: span 1;
+  }
 }
