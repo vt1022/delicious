@@ -1,5 +1,4 @@
 .contact-body {
-
   .main {
     background: linear-gradient(90deg, $primary-white 0%, $primary-white 70%, darken($primary-white, 3%) 70%, darken($primary-white, 3%) 70%);
     
@@ -7,14 +6,14 @@
 
     .container {
       display: flex;
-      flex-wrap: wrap;
       justify-content: center;
+      flex-wrap: wrap;
 
       &__form, &__contact {padding: 40px 30px;}
 
       &__form {
-        padding-left: 0;
         flex: 1 1 65%;
+        padding-left: 0;
 
         &__field {
           display: grid;
@@ -23,12 +22,10 @@
         }
 
         input, textarea {
-          background: darken($primary-white, 10%);
           border: 1px solid transparent;
+          background: darken($primary-white, 10%);
 
-          &:focus {
-            border: 1px solid $primary-black;
-          }
+          &:focus {border: 1px solid $primary-black;}
         }
 
         input[name="subject"] {
@@ -43,9 +40,9 @@
       }
 
       &__contact {
-        background: darken($primary-white, 3%);
-        padding-right: 0;
         flex: 1 0 214px;
+        padding-right: 0;
+        background: darken($primary-white, 3%);
 
         .days {@include fontSans(13, 400);}
         .note {@include fontSize(11);font-style: italic;}
@@ -58,13 +55,14 @@
     }
 
     .image {
+      height: 35vh;
+      max-height: 600px;
+      min-height: 300px;
+
       background: url(../assets/contact-2.jpeg);
       background-repeat: no-repeat;
       background-position: right top;
       background-size: cover;
-      height: 35vh;
-      max-height: 600px;
-      min-height: 300px;
     }
   }
 }

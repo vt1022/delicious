@@ -1114,11 +1114,11 @@ textarea {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .contact-body .main .container__form, .contact-body .main .container__contact {
@@ -1126,10 +1126,10 @@ textarea {
 }
 
 .contact-body .main .container__form {
-  padding-left: 0;
   -webkit-box-flex: 1;
       -ms-flex: 1 1 65%;
           flex: 1 1 65%;
+  padding-left: 0;
 }
 
 .contact-body .main .container__form__field {
@@ -1141,8 +1141,8 @@ textarea {
 }
 
 .contact-body .main .container__form input, .contact-body .main .container__form textarea {
-  background: #dddddd;
   border: 1px solid transparent;
+  background: #dddddd;
 }
 
 .contact-body .main .container__form input:focus, .contact-body .main .container__form textarea:focus {
@@ -1162,11 +1162,11 @@ textarea {
 }
 
 .contact-body .main .container__contact {
-  background: #eeeeee;
-  padding-right: 0;
   -webkit-box-flex: 1;
       -ms-flex: 1 0 214px;
           flex: 1 0 214px;
+  padding-right: 0;
+  background: #eeeeee;
 }
 
 .contact-body .main .container__contact .days {
@@ -1200,13 +1200,13 @@ textarea {
 }
 
 .contact-body .main .image {
+  height: 35vh;
+  max-height: 600px;
+  min-height: 300px;
   background: url(../assets/contact-2.jpeg);
   background-repeat: no-repeat;
   background-position: right top;
   background-size: cover;
-  height: 35vh;
-  max-height: 600px;
-  min-height: 300px;
 }
 
 .footer {
