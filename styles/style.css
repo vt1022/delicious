@@ -323,8 +323,8 @@ h1 {
   font-family: 'Raleway', sans-serif;
   font-weight: 700;
   color: #2e2e2e;
-  letter-spacing: 1.1px;
   line-height: 48px;
+  letter-spacing: 1.1px;
 }
 
 h2 {
@@ -333,8 +333,8 @@ h2 {
   font-family: 'Raleway', sans-serif;
   font-weight: 700;
   color: #2e2e2e;
-  letter-spacing: 0.5px;
   line-height: 36px;
+  letter-spacing: 0.5px;
   position: relative;
 }
 
@@ -344,8 +344,8 @@ h3 {
   font-family: 'Raleway', sans-serif;
   font-weight: 700;
   color: #2e2e2e;
-  letter-spacing: 0.5px;
   line-height: 24px;
+  letter-spacing: 0.5px;
 }
 
 p {
@@ -361,9 +361,9 @@ p {
 .button, button {
   font-size: 14px;
   font-size: 1.4rem;
+  border: 1px solid transparent;
   color: #f6f6f6;
   background: #64a604;
-  border: 1px solid transparent;
   text-transform: uppercase;
 }
 
@@ -378,9 +378,9 @@ button, .button {
 }
 
 button:hover, button:focus, .button:hover, .button:focus {
-  cursor: pointer;
   background: none;
   color: #64a604;
+  cursor: pointer;
 }
 
 fieldset {
@@ -395,8 +395,8 @@ input, textarea {
   font-family: 'Lora', serif;
   font-weight: 400;
   color: #2e2e2e;
-  border: 1px solid #c7c7c7;
   padding: 10px;
+  border: 1px solid #c7c7c7;
 }
 
 input:focus, textarea:focus {
@@ -517,12 +517,12 @@ textarea {
 
 .home-body .main h2::after {
   content: '';
-  width: 42%;
-  border: 2px solid #64a604;
-  border-radius: 3px;
   position: absolute;
   bottom: -40%;
   left: 50%;
+  width: 42%;
+  border: 2px solid #64a604;
+  border-radius: 3px;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
 }
@@ -552,13 +552,13 @@ textarea {
 }
 
 .home-body .main .reci-container__card__item__image {
-  height: 100%;
   width: 100%;
+  height: 100%;
+  margin: 0 auto;
   -o-object-fit: cover;
      object-fit: cover;
   -o-object-position: bottom center;
      object-position: bottom center;
-  margin: 0 auto;
 }
 
 .home-body .main .reci-container__card__item__image.image2 {
@@ -604,8 +604,8 @@ textarea {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background: #ccc;
   padding-left: 65px;
+  background: #ccc;
 }
 
 .home-body .main .reci-container__card__item__menu {
@@ -618,11 +618,11 @@ textarea {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: start;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
   max-width: 500px;
 }
 
@@ -679,10 +679,10 @@ textarea {
 }
 
 .home-body .main .restaurants {
-  min-height: 600px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  min-height: 600px;
 }
 
 .home-body .main .restaurants__container {
@@ -699,8 +699,8 @@ textarea {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  margin: 0 auto;
   padding: 80px 0;
+  margin: 0 auto;
 }
 
 .home-body .main .restaurants__container__body {
@@ -717,16 +717,16 @@ textarea {
 
 .home-body .main .restaurants__container__image-container:nth-of-type(2) {
   position: absolute;
-  max-width: 180px;
   top: 0;
   right: 0;
+  max-width: 180px;
   -webkit-transform: translate(40%, -55%);
           transform: translate(40%, -55%);
 }
 
 .home-body .main .restaurants__container__image {
-  height: 100%;
   width: 100%;
+  height: 100%;
 }
 
 .home-body .main .gallery {
@@ -762,10 +762,10 @@ textarea {
   display: -ms-flexbox;
   display: flex;
   padding: 40px 0;
-  background: #dded9a;
+  max-height: 900px;
   height: 60vh;
   min-height: 700px;
-  max-height: 900px;
+  background: #dded9a;
 }
 
 .home-body .main .testimonials .wrapper {
@@ -797,23 +797,23 @@ textarea {
   font-family: 'Lora', serif;
   font-weight: 400;
   color: #2e2e2e;
-  font-style: italic;
+  position: relative;
   max-width: 800px;
   padding: 0 40px;
+  font-style: italic;
   text-align: center;
   letter-spacing: 0.6px;
   line-height: 36px;
-  position: relative;
 }
 
 .home-body .main .testimonials__container__body::before, .home-body .main .testimonials__container__body::after {
   font-size: 46px;
   font-size: 4.6rem;
+  position: absolute;
+  color: #fafcf1;
   font-family: "Font Awesome 5 Pro";
   font-weight: 900;
   font-style: normal;
-  color: #fafcf1;
-  position: absolute;
 }
 
 .home-body .main .testimonials__container__body::before {
@@ -832,12 +832,12 @@ textarea {
 }
 
 .home-body .main .testimonials__container__arrow {
-  background: none;
-  color: #fafcf1;
-  font-size: 30px;
   border: 0;
   padding: 0;
   margin: 20px;
+  background: none;
+  color: #fafcf1;
+  font-size: 30px;
 }
 
 .home-body .main .testimonials__container__arrow:hover i, .home-body .main .testimonials__container__arrow:focus i {
