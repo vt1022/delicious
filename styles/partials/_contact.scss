@@ -25,7 +25,7 @@
           border: 1px solid transparent;
           background: darken($primary-white, 10%);
 
-          &:focus {border: 1px solid $primary-black;}
+          &:focus {border: 1px solid $primary-accent;}
         }
 
         input[name="subject"] {

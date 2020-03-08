@@ -112,5 +112,7 @@
       @include fontSans(14, 400, auto);
       margin: 0;
     }
+
+    a:hover{color: $secondary-accent;}
   }  
 }

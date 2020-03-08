@@ -6,6 +6,8 @@
 @media (max-width: 925px) {
   // show hamburger
   .header {
+    a {&:hover::after {width: 0;height: 0;}}
+    
     nav {
       /* hamburger starts */
       ul { 

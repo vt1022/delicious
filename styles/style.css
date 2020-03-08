@@ -414,7 +414,7 @@ input, textarea {
 }
 
 input:focus, textarea:focus {
-  border: 1px solid #2e2e2e;
+  border: 1px solid #64a604;
   outline: none;
 }
 
@@ -459,6 +459,29 @@ textarea {
 .header a {
   display: inline-block;
   padding: 6px 10px;
+  position: relative;
+  z-index: 0;
+}
+
+.header a::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: -1;
+  width: 0%;
+  height: 1px;
+  background: #DC1570;
+  -webkit-transition: all .3s ease-in;
+  transition: all .3s ease-in;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  opacity: 30%;
+}
+
+.header a:hover::after {
+  width: 100%;
+  height: 6px;
 }
 
 .header .header__top-bar {
@@ -1163,7 +1186,7 @@ textarea {
 }
 
 .contact-body .main .container__form input:focus, .contact-body .main .container__form textarea:focus {
-  border: 1px solid #2e2e2e;
+  border: 1px solid #64a604;
 }
 
 .contact-body .main .container__form input[name="subject"] {
@@ -1435,6 +1458,10 @@ textarea {
   margin: 0;
 }
 
+.footer__copyright a:hover {
+  color: #DC1570;
+}
+
 @media (max-width: 1060px) {
   .header a, .header i {
     font-size: 14px;
@@ -1443,6 +1470,10 @@ textarea {
 }
 
 @media (max-width: 925px) {
+  .header a:hover::after {
+    width: 0;
+    height: 0;
+  }
   .header nav {
     /* hamburger starts */
     /* hamburger animation starts */

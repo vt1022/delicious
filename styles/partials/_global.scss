@@ -101,6 +101,6 @@ input, textarea {
   transition: all .3s ease-in;
 }
 
-input:focus, textarea:focus {border: 1px solid $primary-black;outline: none;}
+input:focus, textarea:focus {border: 1px solid $primary-accent;outline: none;}
 
 textarea {width: 100%;resize: none;}
