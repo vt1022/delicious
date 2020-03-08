@@ -881,18 +881,18 @@ textarea {
 }
 
 .blog-body .credits li:nth-of-type(1) {
-  border-right: 1px solid #333333;
   padding-left: 0;
+  border-right: 1px solid #333333;
 }
 
 .blog-body .credits li:nth-of-type(3) {
-  border-left: 1px solid #333333;
   padding-right: 0;
+  border-left: 1px solid #333333;
 }
 
 .blog-body .post__container, .blog-body .post__socials, .blog-body .post__author, .blog-body .related {
-  border-bottom: 1px solid #e1e1e1;
   padding: 30px 0;
+  border-bottom: 1px solid #e1e1e1;
 }
 
 .blog-body .post p {
@@ -922,9 +922,7 @@ textarea {
   padding: 0 10px;
 }
 
-.blog-body .post__socials h3,
-.blog-body .post__socials ul,
-.blog-body .post__socials ul li {
+.blog-body .post__socials h3, .blog-body .post__socials ul, .blog-body .post__socials ul li {
   display: inline-block;
 }
 
@@ -932,27 +930,27 @@ textarea {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .blog-body .post__author__image-container {
-  margin: 10px 30px 10px;
   -webkit-box-flex: 0;
       -ms-flex: 0 0 auto;
           flex: 0 0 auto;
+  margin: 10px 30px 10px;
 }
 
 .blog-body .post__author__about-container {
-  background: #e6e6e6;
-  padding: 20px 30px;
-  margin: 10px 0;
   -webkit-box-flex: 1;
       -ms-flex: 1 1 300px;
           flex: 1 1 300px;
+  padding: 20px 30px;
+  margin: 10px 0;
+  background: #e6e6e6;
 }
 
 .blog-body .post__author__about-container p {
@@ -962,8 +960,8 @@ textarea {
 .blog-body .related h2 {
   font-size: 19px;
   font-size: 1.9rem;
-  letter-spacing: 0.2px;
   line-height: 21px;
+  letter-spacing: 0.2px;
 }
 
 .blog-body .related h3 {
@@ -1046,12 +1044,12 @@ textarea {
 }
 
 .blog-body .comments__card__body {
+  position: relative;
   -webkit-box-flex: 1;
       -ms-flex: 1 1 300px;
           flex: 1 1 300px;
-  position: relative;
-  margin-top: 20px;
   padding: 5px 18px;
+  margin-top: 20px;
   background: #e6e6e6;
 }
 

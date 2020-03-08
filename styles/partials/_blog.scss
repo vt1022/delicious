@@ -1,6 +1,7 @@
 .blog-body {
   .main {
     padding: 90px 0;
+    
     a:hover, a:focus {color: $primary-accent;}
     h1 {@include fontSize(38);margin:0 0 18px 0;}
     h3 {@include fontSize(16);margin: 6px 0;}
@@ -18,24 +19,22 @@
     }
 
     &:nth-of-type(1) {
-      border-right: 1px solid $secondary-black;
       padding-left: 0;
+      border-right: 1px solid $secondary-black;
     }
 
     &:nth-of-type(3) {
-      border-left: 1px solid $secondary-black;
       padding-right: 0;
+      border-left: 1px solid $secondary-black;
     }
   }
 
   .post__container, .post__socials, .post__author, .related {
-    border-bottom: 1px solid lighten( $primary-black, 70%);
     padding: 30px 0;
+    border-bottom: 1px solid lighten( $primary-black, 70%);
   }
 
-  .post {
-    p {margin: 20px 0;}
-  }
+  .post {p {margin: 20px 0;}}
 
   .post__socials {
     a {
@@ -43,36 +42,29 @@
       text-transform: none;
     }
 
-    &__tags li, &__container h3{
-      padding-right: 3px;
-    }
-
+    &__tags li, &__container h3{padding-right: 3px;}
     i {@include fontSize(16); text-align: center;}
-
     &__share a {padding: 0 10px;}
   }
 
-  .post__socials h3,
-  .post__socials ul,
-  .post__socials ul li {
-    display: inline-block;
-  }
+  .post__socials h3,.post__socials ul,.post__socials ul li {display: inline-block;}
 
   .post__author {
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
+    flex-wrap: wrap;
 
     &__image-container {
-      margin: 10px 30px 10px;
       flex: 0 0 auto;
+      margin: 10px 30px 10px;
     }
 
     &__about-container {
-      background: lighten($primary-black, 72%);
+      flex: 1 1 300px;
       padding: 20px 30px;
       margin: 10px 0;
-      flex: 1 1 300px;
+
+      background: lighten($primary-black, 72%);
 
       p {margin: 10px 0;}
     }
@@ -81,8 +73,8 @@
   .related {
     h2 {
       @include fontSize(19);
-      letter-spacing: 0.2px;
       line-height: 21px;
+      letter-spacing: 0.2px;
     }
     
     h3{margin-top: 0;}
@@ -105,7 +97,7 @@
 
       &__info {
         li {@include fontSerif(11);}
-        a {@include fontSans(11, 400, $secondary-black)}
+        a {@include fontSans(11, 400, $secondary-black);}
       }
     }
   }
@@ -123,15 +115,16 @@
       }
 
       &__body {
-        flex: 1 1 300px;
         position: relative;
-        margin-top: 20px;
+
+        flex: 1 1 300px;
         padding: 5px 18px;
+        margin-top: 20px;
+        
         background: lighten($primary-black, 72%);
 
         p {margin: 5px 0;}
-
-        p span {@include fontSans(14)}
+        p span {@include fontSans(14);}
 
         p:last-child{
           @include fontSans(12, 400);
@@ -149,15 +142,11 @@
           border-bottom-color: transparent;  
         }
       }
-      
     }
 
-    &__form-container {
-      margin: 35px 0;
-    }
+    &__form-container {margin: 35px 0;}
 
     &__form {
-      
       &__info {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
