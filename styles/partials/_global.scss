@@ -16,7 +16,10 @@ a {
   @include fontSans(18);
   letter-spacing: 0.5px;
   text-decoration: none;
+}
 
+a:hover, a:focus {
+  color: $primary-accent;
 }
 
 .wrapper,

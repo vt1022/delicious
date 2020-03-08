@@ -1,6 +1,7 @@
 .blog-body {
   .main {
     padding: 90px 0;
+    a:hover, a:focus {color: $primary-accent;}
     h1 {@include fontSize(38);margin:0 0 18px 0;}
     h3 {@include fontSize(16);margin: 6px 0;}
   }

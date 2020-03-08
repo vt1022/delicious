@@ -15,12 +15,13 @@
     transition: 0.5s;
     position: fixed;
   }
-  
+
   nav input{ display: none; }
   /* hamburger ends */
 
   a, i {
     @include fontSize(16);
+    color: $primary-black;
     text-transform: uppercase;
   }
 
@@ -68,7 +69,7 @@
     background-size: cover;
     height: 35vh;
     min-height: 400px;
-    max-height: 800px;
+    max-height: 800px;  
   }
 }
 

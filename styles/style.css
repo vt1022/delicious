@@ -285,6 +285,10 @@ a {
   text-decoration: none;
 }
 
+a:hover, a:focus {
+  color: #64a604;
+}
+
 .wrapper,
 .header-wrapper,
 .wrapper--75 {
@@ -417,6 +421,7 @@ textarea {
 .header a, .header i {
   font-size: 16px;
   font-size: 1.6rem;
+  color: #2e2e2e;
   text-transform: uppercase;
 }
 
@@ -486,6 +491,10 @@ textarea {
   background-repeat: no-repeat;
   background-position: left top;
   background-size: cover;
+}
+
+.home-body .main h2 {
+  text-align: center;
 }
 
 .home-body .main h2::after {
@@ -815,6 +824,10 @@ textarea {
 
 .blog-body .main {
   padding: 90px 0;
+}
+
+.blog-body .main a:hover, .blog-body .main a:focus {
+  color: #64a604;
 }
 
 .blog-body .main h1 {
@@ -1315,7 +1328,11 @@ textarea {
     /* hamburger animation ends */
     /* hamburger ends */
   }
-  .header nav ul, .header nav a {
+  .header nav ul {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     height: 0;
     width: 100%;
     left: 0;
@@ -1346,9 +1363,6 @@ textarea {
     -webkit-transition: 0.2s ease;
     transition: 0.2s ease;
   }
-  .header nav .header__top-bar__nav {
-    padding: 5px;
-  }
   .header nav .hamburger:active .hamburger-lines {
     -webkit-transform: translateY(-10px);
             transform: translateY(-10px);
@@ -1372,34 +1386,41 @@ textarea {
     height: auto;
     width: 100%;
     top: 0;
-    background: #183399;
+    background: #dded9a;
     z-index: 1;
   }
   .header nav .header__top-bar__nav li {
-    display: block;
-    padding: 30px 0;
+    display: inline-block;
+    padding: 6px 0;
     text-align: center;
     border-bottom: 2px solid #ACACAC;
   }
-  .header nav .header__top-bar__nav li:first-of-type {
-    border-top: 2px solid #ACACAC;
+  .header nav .header__top-bar__nav li:last-of-type {
+    border-bottom: none;
   }
   .header nav .header__top-bar__nav a {
-    font-size: 4rem;
+    font-size: 20px;
+    font-size: 2rem;
     padding: 20px 20%;
   }
-  .header nav .header__top-bar__nav a:hover::after,
-  .header nav .header__top-bar__nav a:focus::after {
-    width: 40%;
-    left: 50%;
-    bottom: 20%;
-    -webkit-transform: translateX(-50%);
-            transform: translateX(-50%);
-    background: -webkit-gradient(linear, left top, right top, from(#FCFCFC), to(#183399));
-    background: linear-gradient(to right, #FCFCFC, #183399);
+  .header nav .header__top-bar__nav i {
+    font-size: 40px;
+    font-size: 4rem;
   }
   .header nav .hamburger:hover, .header nav .hamburger:focus {
     cursor: pointer;
+  }
+  .header .header__top-bar__nav a[href="#search"],
+  .header .header__top-bar__nav a[href="#cart"] {
+    padding: 10px 20%;
+  }
+  .header a[href="#cart"] span {
+    font-size: 13px;
+    font-size: 1.3rem;
+    bottom: 5px;
+    right: 43%;
+    width: 20px;
+    height: 20px;
   }
   .home-body .main .testimonials__container__body {
     font-size: 18px;
@@ -1407,15 +1428,24 @@ textarea {
     padding: 0 20px;
   }
   .home-body .main .testimonials__container__body::before, .home-body .main .testimonials__container__body::after {
-    font-size: 30px;
-    font-size: 3rem;
+    font-size: 26px;
+    font-size: 2.6rem;
+    opacity: 60%;
   }
   .home-body .main .testimonials__container__body::before {
-    right: calc(100%);
+    right: calc(100% - 30px);
   }
   .home-body .main .testimonials__container__body::after {
-    left: calc(100%);
+    left: calc(100% - 30px);
     bottom: 20px;
+  }
+}
+
+@media (max-width: 914px) {
+  .home-body .main .reci-container__card .item2 {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
   }
 }
 
@@ -1429,6 +1459,16 @@ textarea {
 }
 
 @media (max-width: 624px) {
+  .home-body .main .reci-container__card__item__menu li:nth-of-type(2n + 1) p {
+    margin-right: 0;
+  }
+  .home-body .main .restaurants__container__two-images {
+    margin-top: 30px;
+    margin-right: 40px;
+  }
+  .home-body .main .restaurants__container__image-container:nth-of-type(2) {
+    max-width: 130px;
+  }
   .contact-body .main .container__form__field {
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
@@ -1437,5 +1477,18 @@ textarea {
   .contact-body .main .container__form input[name="subject"], .contact-body .main .container__form textarea {
     grid-row: auto;
     grid-column: span 1;
+  }
+  .footer__copyright p, .footer__copyright a {
+    font-size: 10px;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 541px) {
+  .blog-body .comments__card__body .arrow {
+    top: -18px;
+    left: 10px;
+    border-bottom-color: #e6e6e6;
+    border-right-color: transparent;
   }
 }
