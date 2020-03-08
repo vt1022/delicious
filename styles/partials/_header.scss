@@ -47,7 +47,8 @@
   }
 }
 
-.blog-body {
+.blog-body, 
+.contact-body {
   .header {
     background: url(../assets/blog-1.jpeg);
     background-repeat: no-repeat;
@@ -56,5 +57,14 @@
     height: 35vh;
     min-height: 400px;
     max-height: 800px;
+  }
+}
+
+.contact-body {
+  .header {
+    background: url(../assets/contact-1.jpeg);
+    background-repeat: no-repeat;
+    background-position: left top;
+    background-size: cover;
   }
 }

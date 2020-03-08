@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css?family=Lora:400,400i|Raleway:400,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles/style.css">
+  <title>Delicious</title>
+</head>
+<div class="outer-wrapper">
+
+  <body class="contact-body">
+    <header class="header">
+      <div class="header__top-bar header-wrapper">
+        <h1>Delicious</h1>
+        <nav>
+          <ul class="header__top-bar__nav">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#recipes">Recipes</a></li>
+            <li><a href="#nutrition">Nutrition</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="#shop">Shop</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li>
+              <a href="#cart" aria-label="go to your shopping cart">
+                <i class="fas fa-shopping-bag" aria-hidden></i>
+                <span aria-hidden aria-label="2 items in your cart">2</span>
+              </a>
+            </li>
+            <li>
+              <i class="fas fa-search" aria-hidden aria-label="search this site"></i>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main class="main">
+      <div class="wrapper--75">
+        <div class="container">
+          <div class="container__form">
+            <h1>Drop Us a Line</h1>
+            <form action="">
+              <fieldset class="container__form__name-email">
+                <label for="name" class="sr-only">Name</label>
+                <input type="text" id="name" name="name" placeholder="Your Name" required>
+                <label for="email" class="sr-only">Email</label>
+                <input type="email" id="email" name="email" placeholder="Your Email" required>
+              </fieldset>
+              <fieldset>
+                <label for="subject" class="sr-only">Subject</label>
+                <input type="text" id="subject" name="subject" placeholder="Subject">
+              
+                <label for="comment" class="sr-only">Message</label>
+                <textarea name="comment" id="comment" cols="30" rows="10" placeholder="Message"></textarea>
+              </fieldset>
+
+            <button class="button" type="submit">Send Message <i class="fas fa-long-arrow-alt-right"></i></button>
+            </form>
+          </div>
+          <div class="container__contact">
+            <div class="container__contact__card card1">
+              <h2>Contact Details</h2>
+              <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquid in quis commodi? Temporibus mollitia incidunt voluptate numquam unde, rem libero.</p>
+            </div>
+            <div class="container__contact__card card2">
+              <h3>Working Hours</h3>
+              <p>MON - FRI: 08:00am - 05:30pm</p>
+              <p>Not working on Saturday and Sunday</p>
+            </div>
+            <div class="container__contact__card card3">
+              <h3>Contact Info</h3>
+              <p>A delicious restaurant</p>
+              <p>Toronto, Ontario</p>
+              <p>yum@food.com</p>
+              <p>+1 234 567 8910</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="image"></div>
+    </main>
+
+    <footer class="footer">
+      <div class="wrapper">
+        <div class="footer__container">
+          <div class="footer__container__contact">
+            <h2>Delicious</h2>
+            <ul>
+              <li>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, non. Harum quibusdam repudiandae
+                  facere dolore.</p>
+              </li>
+              <li>
+                <p class="exclude">A delicious restaurant</p>
+                <p>Toronto, Ontario</p>
+              </li>
+              <li>
+                <P>yum@food.com</P>
+              </li>
+              <li>
+                <p class="exclude">+1 234 567 8901</p>
+              </li>
+            </ul>
+          </div>
+
+          <div class="footer__container__articles">
+            <h3>Recent Posts</h3>
+            <ul>
+              <li>
+                <p>Beetroot water spinach okra water</p>
+              </li>
+              <li>
+                <p>Chestnut ricebean pea catsear courgette</p>
+              </li>
+              <li>
+                <p>Summer purslane spinach arugula pea</p>
+              </li>
+              <li>
+                <p>Tatsol aubergine spring onion bush</p>
+              </li>
+              <li>
+                <p>Tomato kale radicchio turnip chicory</p>
+              </li>
+              <li>
+                <p class="exclude">Salsify pea sprouts fava bean</p>
+              </li>
+            </ul>
+          </div>
+
+          <div class="footer__container__socials">
+            <h3>Subscribe Now</h3>
+            <p>Get all of our newest recipes immediately in your inbox!</p>
+            <form action="">
+              <label for="email" class="sr-only">Email</label>
+              <input type="email" id="email" name="email" placeholder="Enter your email">
+              <button type="submit"><i class="fas fa-long-arrow-alt-right"></i></button>
+            </form>
+            <ul class="footer__container__socials__nav">
+              <li>
+                <a href="#fb" aria-label="go to our facebook">
+                  <i class="fab fa-facebook-f" aria-hidden></i>
+                </a>
+              </li>
+              <li>
+                <a href="#twitter" aria-label="go to our twitter">
+                  <i class="fab fa-twitter" aria-hidden></i>
+                </a>
+              </li>
+              <li>
+                <a href="#ig" aria-label="go to our instgram">
+                  <i class="fab fa-instagram" aria-hidden></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="footer__copyright">
+        <div class="wrapper">
+          <p>Copyrights © 2015 by <a class="footer__copyright__link" href="#polar">Polar</a>. All Rights Reservered.</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- scripts -->
+    <script src='https://kit.fontawesome.com/ffe844f662.js' crossorigin='anonymous'></script>
+  </body>
+</div>
+
+</html>

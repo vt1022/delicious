@@ -287,7 +287,7 @@ a {
 
 .wrapper,
 .header-wrapper,
-.blog-wrapper {
+.wrapper--75 {
   max-width: 1280px;
   width: 90%;
   margin: 0 auto;
@@ -297,7 +297,7 @@ a {
   width: 95%;
 }
 
-.blog-wrapper {
+.wrapper--75 {
   width: 75%;
 }
 
@@ -366,6 +366,30 @@ button:hover {
   cursor: pointer;
 }
 
+fieldset {
+  padding: 0;
+  border: 0;
+}
+
+input, textarea {
+  font-size: 12px;
+  font-size: 1.2rem;
+  font-family: 'Lora', serif;
+  font-weight: 400;
+  color: #2e2e2e;
+  border: 1px solid #c7c7c7;
+  padding: 10px;
+}
+
+input:focus, textarea:focus {
+  border: 1px solid #2e2e2e;
+}
+
+textarea {
+  width: 100%;
+  resize: none;
+}
+
 .header {
   background: url(../assets/home-1.jpeg);
   background-repeat: no-repeat;
@@ -432,7 +456,8 @@ button:hover {
   border-radius: 50%;
 }
 
-.blog-body .header {
+.blog-body .header,
+.contact-body .header {
   background: url(../assets/blog-1.jpeg);
   background-repeat: no-repeat;
   background-position: center top;
@@ -440,6 +465,13 @@ button:hover {
   height: 35vh;
   min-height: 400px;
   max-height: 800px;
+}
+
+.contact-body .header {
+  background: url(../assets/contact-1.jpeg);
+  background-repeat: no-repeat;
+  background-position: left top;
+  background-size: cover;
 }
 
 .home-body .main h2::after {
@@ -765,20 +797,20 @@ button:hover {
   margin: 20px;
 }
 
-.blog-body h1 {
+.blog-body .main {
+  padding: 90px 0;
+}
+
+.blog-body .main h1 {
   font-size: 38px;
   font-size: 3.8rem;
   margin: 0 0 18px 0;
 }
 
-.blog-body h3 {
+.blog-body .main h3 {
   font-size: 16px;
   font-size: 1.6rem;
   margin: 6px 0;
-}
-
-.blog-body .main {
-  padding: 90px 0;
 }
 
 .blog-body .credits li {
@@ -982,30 +1014,6 @@ button:hover {
   margin: 35px 0;
 }
 
-.blog-body .comments__form fieldset {
-  padding: 0;
-  border: 0;
-}
-
-.blog-body .comments__form input, .blog-body .comments__form textarea {
-  font-size: 12px;
-  font-size: 1.2rem;
-  font-family: 'Lora', serif;
-  font-weight: 400;
-  color: #2e2e2e;
-  border: 1px solid #c7c7c7;
-  padding: 10px;
-}
-
-.blog-body .comments__form input:focus, .blog-body .comments__form textarea:focus {
-  border: 1px solid #2e2e2e;
-}
-
-.blog-body .comments__form textarea {
-  width: 100%;
-  resize: none;
-}
-
 .blog-body .comments__form__info {
   display: -ms-grid;
   display: grid;
@@ -1016,6 +1024,71 @@ button:hover {
 
 .blog-body .comments__form__comment-container {
   margin: 10px 0;
+}
+
+.contact-body .main {
+  background: -webkit-gradient(linear, left top, right top, from(#f6f6f6), color-stop(70%, #f6f6f6), color-stop(70%, #e2e2e2), color-stop(70%, #e2e2e2));
+  background: linear-gradient(90deg, #f6f6f6 0%, #f6f6f6 70%, #e2e2e2 70%, #e2e2e2 70%);
+}
+
+.contact-body .main .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.contact-body .main .container__form, .contact-body .main .container__contact {
+  padding: 40px 30px;
+}
+
+.contact-body .main .container__form {
+  padding-left: 0;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 65%;
+          flex: 1 1 65%;
+}
+
+.contact-body .main .container__form__name-email {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.contact-body .main .container__form__name-email input {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 200px;
+          flex: 1 1 200px;
+}
+
+.contact-body .main .container__form input[name='subject'] {
+  width: 100%;
+}
+
+.contact-body .main .container__form input, .contact-body .main .container__form textarea {
+  margin: 10px 0;
+}
+
+.contact-body .main .container__contact {
+  background: #e2e2e2;
+  padding-right: 0;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 200px;
+          flex: 1 0 200px;
+  max-width: 310px;
+}
+
+.contact-body .main .image {
+  background: url(../assets/contact-2.jpeg);
+  background-repeat: no-repeat;
+  background-position: right top;
+  background-size: cover;
+  height: 35vh;
+  min-height: 300px;
 }
 
 .footer {

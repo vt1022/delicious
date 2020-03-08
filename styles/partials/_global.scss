@@ -21,7 +21,7 @@ a {
 
 .wrapper,
 .header-wrapper,
-.blog-wrapper {
+.wrapper--75 {
   max-width: 1280px;
   width: 90%;
   margin: 0 auto;
@@ -31,7 +31,7 @@ a {
   width: 95%;
 }
 
-.blog-wrapper {
+.wrapper--75 {
   width: 75%;
 }
 
@@ -82,3 +82,17 @@ p {
 button:hover {
   cursor: pointer;
 }
+
+fieldset {padding: 0; border: 0;}
+
+input, textarea {
+  @include fontSerif(12);
+  border: 1px solid lighten($primary-black, 60%);
+  padding: 10px;
+}
+
+input:focus, textarea:focus {
+  border: 1px solid $primary-black;
+}
+
+textarea {width: 100%;resize: none;}
